@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\expandable_list_item_bg_normal.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable-xhdpi\\expandable_list_item_bg_normal.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\fab_add.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.github.clans\\fab\\1.6.2\\res\\drawable-xhdpi-v4\\fab_add.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\list_item_bg_normal.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable-xhdpi\\list_item_bg_normal.xml"
+    }
+]

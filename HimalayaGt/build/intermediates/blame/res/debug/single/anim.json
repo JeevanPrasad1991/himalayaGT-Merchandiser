@@ -1,0 +1,110 @@
+[
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\anim\\slide_in_bottom.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\anim\\slide_in_bottom.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\anim\\activity_back_out.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\anim\\activity_back_out.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_in.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\anim\\design_fab_in.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\anim\\activity_in.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\anim\\activity_in.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\anim\\translate.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\anim\\translate.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\anim\\activity_out.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\anim\\activity_out.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\anim\\fab_slide_out_to_left.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.github.clans\\fab\\1.6.2\\res\\anim\\fab_slide_out_to_left.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\anim\\design_snackbar_in.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\anim\\fab_slide_in_from_right.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.github.clans\\fab\\1.6.2\\res\\anim\\fab_slide_in_from_right.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\anim\\fab_slide_out_to_right.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.github.clans\\fab\\1.6.2\\res\\anim\\fab_slide_out_to_right.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_out.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\anim\\design_fab_out.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\anim\\design_snackbar_out.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\anim\\fab_scale_down.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.github.clans\\fab\\1.6.2\\res\\anim\\fab_scale_down.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\anim\\alpha.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\anim\\alpha.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\anim\\activity_back_in.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\anim\\activity_back_in.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\anim\\fab_slide_in_from_left.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.github.clans\\fab\\1.6.2\\res\\anim\\fab_slide_in_from_left.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\anim\\fab_scale_up.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.github.clans\\fab\\1.6.2\\res\\anim\\fab_scale_up.xml"
+    }
+]

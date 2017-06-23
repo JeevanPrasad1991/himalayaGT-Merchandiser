@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/grey_background"
+    android:weightSum="100">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+   <!-- <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appbar"
+        android:layout_centerHorizontal="true">-->
+            <LinearLayout
+                android:id="@+id/rl_uper"
+                android:layout_below="@+id/appbar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="100" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="12"
+                    android:orientation="horizontal"
+                    android:text="Reason"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="10" >
+
+
+                    <TextView
+                        android:id="@+id/texte01"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="3sp"
+                        android:layout_weight="4"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="17sp"
+                        android:gravity="center_vertical"
+                        android:text="Category"
+
+                        />
+
+
+
+                    <Spinner
+                        android:id="@+id/spin_category1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="6"
+                        android:paddingLeft="5dp"
+
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="12"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="10" >
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="3sp"
+                        android:layout_weight="6"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="17sp"
+                        android:gravity="center_vertical"
+                        android:text="Planogram Compliance"
+
+                        />
+
+
+                    <ToggleButton
+                        android:id="@+id/stock_toggle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_weight="4"
+                        android:checked="true"
+                        android:textOn="Yes"
+                        android:textOff="No"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/rl_camera"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="8"
+                    android:orientation="horizontal"
+                    android:weightSum="10"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/camra"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="3sp"
+                        android:layout_weight="3"
+                        android:gravity="center_vertical"
+                        android:text="Camera"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="17sp" />
+                    <TextView
+                        android:id="@+id/camr01"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="3sp"
+                        android:layout_weight="4"
+                        android:gravity="center_vertical"
+                        android:textColor="#2156a6"
+                        android:textSize="14sp"
+                        android:visibility="invisible"/>
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:id="@+id/imageButton1"
+                        android:layout_weight="2"
+                        android:background="@drawable/cam_icon"/>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="12"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="10" >
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="3sp"
+                        android:layout_weight="3"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="17sp"
+                        android:gravity="center_vertical"
+                        android:text="Remark"
+
+                        />
+
+
+                    <EditText
+                        android:id="@+id/edt_remark"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_weight="7"
+                        android:hint="(Optinal)"
+
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="8"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:text="Reason"
+                    android:weightSum="10"
+                    android:layout_marginTop="5dp">
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="3sp"
+                        android:layout_weight="4"
+                        android:gravity="center_vertical"
+                        android:text="Quantity Deployed"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="17sp" />
+                    <EditText
+                        android:id="@+id/et_quantity1"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="6"
+                        android:maxLength="3"
+                        android:inputType="number"
+                        android:paddingLeft="5dp"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="8"
+                    android:orientation="horizontal"
+                    android:text="Reason"
+                    android:weightSum="10" >
+
+                    <TextView
+                        android:id="@+id/textVie01"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="3sp"
+                        android:layout_weight="4"
+                        android:gravity="center_vertical"
+                        android:textColor="#2156a6"
+                        android:textSize="14sp"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/btn_Add1"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/colorPrimary"
+                        android:textColor="#ffffff"
+                        android:layout_weight="3"
+                        android:paddingLeft="5dp"
+                        android:layout_marginBottom="3dp"
+                        android:text="Save" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_below="@+id/rl_uper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:text="Reason"
+                    android:weightSum="12" >
+                    <TextView
+                        android:id="@+id/textVie"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorPrimary"
+                        android:textColor="#ffffff"
+                        android:layout_marginLeft="3sp"
+                        android:layout_weight="4"
+                        android:text="Category"
+                        android:gravity="center"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/textVi"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="3sp"
+                        android:layout_weight="4"
+                        android:background="@color/colorPrimary"
+                        android:textColor="#ffffff"
+                        android:gravity="center"
+                        android:text="ImageUrl"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/spinn"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:layout_marginLeft="3sp"
+                        android:background="@color/colorPrimary"
+                        android:textColor="#ffffff"
+                        android:layout_weight="3"
+                        android:paddingLeft="5dp"
+                        android:text="Exits"
+                        />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:layout_marginLeft="3sp"
+                        android:background="@color/colorPrimary"
+                        android:textColor="#ffffff"
+                        android:layout_weight="3"
+                        android:paddingLeft="5dp"
+                        android:text="Remarks"
+                        />
+                    <TextView
+                        android:id="@+id/closebtn1"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:layout_marginLeft="3sp"
+                        android:background="@color/colorPrimary"
+                        android:textColor="#ffffff"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+
+                        />
+                </LinearLayout>
+
+                <ListView
+                    android:id="@+id/listView3"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                />
+
+        </LinearLayout>
+
+   <!-- </LinearLayout>-->
+</RelativeLayout>

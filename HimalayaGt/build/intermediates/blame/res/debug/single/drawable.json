@@ -1,0 +1,750 @@
+[
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\posm_deployed_selector.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\posm_deployed_selector.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\rt_logo_new.jpg",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\rt_logo_new.jpg"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\gradient_bg_hover.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\gradient_bg_hover.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\baking_chocolates.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\baking_chocolates.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\smithnjones_logo.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\smithnjones_logo.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\store_icon.jpg",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\store_icon.jpg"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\callsdone.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\callsdone.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_focussku.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\btn_focussku.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\special_window_selector.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\special_window_selector.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\stock1.jpg",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\stock1.jpg"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\mondelezlogo.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\mondelezlogo.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\gradient_background.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\gradient_background.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\save_active.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\save_active.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\storeprofile_done.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\storeprofile_done.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\list_box_1.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\list_box_1.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\txt_box_bg.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\txt_box_bg.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_dailyentry.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\btn_dailyentry.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\login_txt.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\login_txt.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\head_banner.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\head_banner.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\competition1.jpg",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\competition1.jpg"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\tab_background.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\tab_background.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\background.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\background.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\tab_highlight.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\tab_highlight.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\signin_btn.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\signin_btn.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\common_plus_signin_btn_text_light.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_plus_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_dark.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_dialog_material_background_dark.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\rt_logo_small.jpg",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\rt_logo_small.jpg"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\camerabtn.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\camerabtn.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_dark.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_google_signin_btn_icon_dark.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\deactivebtn_bg.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\deactivebtn_bg.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\geotag1.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\geotag1.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\meccain_icon.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\meccain_icon.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\parinaam_logo.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\parinaam_logo.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\tick_d.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\tick_d.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\common_plus_signin_btn_text_dark.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_plus_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\grey_bg.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\grey_bg.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_skuavailability.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\btn_skuavailability.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\save_i.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\save_i.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\cpmpetition_done1.jpg",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\cpmpetition_done1.jpg"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\daily_activity_hover.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\daily_activity_hover.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\rtlogo.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\rtlogo.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\geotagdone.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\geotagdone.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\posm1.jpg",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\posm1.jpg"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\custome_border.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\custome_border.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\tab_indicator.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\tab_indicator.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\drawable\\design_snackbar_background.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\window_done.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\window_done.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\sym_keyboard_feedback_return.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\sym_keyboard_feedback_return.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_full_material.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_ratingbar_full_material.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\tick_p.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\tick_p.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\stock.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\stock.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\exit.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\exit.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\pointer.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\pointer.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_autoupdate.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\btn_autoupdate.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\gradient_bg.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\gradient_bg.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_google_signin_btn_icon_light.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_checkout.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\btn_checkout.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\secondary_window_selector.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\secondary_window_selector.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\download.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\download.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\btnsavebg.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\btnsavebg.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\download_data_selector.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\download_data_selector.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\sym_keyboard_delete.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\sym_keyboard_delete.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\editboxtext.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\editboxtext.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\tickgreenv.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\tickgreenv.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_light.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_dialog_material_background_light.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\download_icon.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\download_icon.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\drawable\\design_fab_background.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\tata_logo.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\tata_logo.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\back_btn_bg.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\back_btn_bg.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_btn_check_material.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\dailyentry_selector.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\dailyentry_selector.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\sku_icon.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\sku_icon.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\title_bg.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\title_bg.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\chings.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\chings.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\assets.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\assets.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\geo_tag_btn.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\geo_tag_btn.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\daily_activity.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\daily_activity.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\title_header.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\title_header.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\rtretail.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\rtretail.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\kpi_done.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\kpi_done.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\kpi.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\kpi.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\calls.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\calls.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\tick_c.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\tick_c.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\geo_selector.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\geo_selector.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\poweredby.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\poweredby.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\header_title.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\header_title.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\fotter_bg.gif",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\fotter_bg.gif"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\window_icon_done.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\window_icon_done.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\button_customlayout.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\button_customlayout.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\cam_icon.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\cam_icon.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\sign_in_selector.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\sign_in_selector.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\storeprofile.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\storeprofile.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\footer.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\footer.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\windows.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\windows.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\titletext_bg.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\titletext_bg.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\bg.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\bg.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\logo_mccain.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\logo_mccain.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\stockdone.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\stockdone.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\rt_logo_trans.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\rt_logo_trans.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\geotag.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\geotag.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\logo.jpg",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\logo.jpg"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\smithnjonesnoodles.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\smithnjonesnoodles.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\storesignage1.jpg",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\storesignage1.jpg"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\innerbtn.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\innerbtn.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\food.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\food.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\bubbly.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\bubbly.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\exit_btn.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\exit_btn.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\tick_u.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\tick_u.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\daily_entry.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\daily_entry.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_flex.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\btn_flex.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\mccainpb.jpg",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\mccainpb.jpg"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\windows_icon_done.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\windows_icon_done.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\pointer1.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\pointer1.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_posmexecution.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\btn_posmexecution.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\blue_btn.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\blue_btn.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\side_nav_bar.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\side_nav_bar.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_light.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\posm_done1.jpg",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\posm_done1.jpg"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\exit_selector.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\exit_selector.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\calls_done.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\calls_done.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\line.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\line.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\window_icon.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\window_icon.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\upload_btn.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\upload_btn.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\upload_data_selector.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\upload_data_selector.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_posmtheme.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\btn_posmtheme.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\cam_icon_done.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\cam_icon_done.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_dark.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\poweredbycandid.jpg",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\poweredbycandid.jpg"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\storetag.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\storetag.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\rt_logo.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\rt_logo.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_soself.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\btn_soself.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\store_marker.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\store_marker.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\common_plus_signin_btn_icon_light.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_plus_signin_btn_icon_light.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_downloaddata.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\btn_downloaddata.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\common_plus_signin_btn_icon_dark.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_plus_signin_btn_icon_dark.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\mccainvf.jpg",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\mccainvf.jpg"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\login_header.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\login_header.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\auto_update_selector.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\auto_update_selector.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\mccainpic.jpg",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\mccainpic.jpg"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\sku_display_selector.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\sku_display_selector.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\calls_img.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\calls_img.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\geotag_done1.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\geotag_done1.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\pob.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\pob.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\tab_text_indicator.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\tab_text_indicator.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_sdisplay.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\btn_sdisplay.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\loreal1.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\loreal1.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\storesignage_done1.jpg",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\storesignage_done1.jpg"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\deep_freezer.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\deep_freezer.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\capital_logo.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\capital_logo.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_upload.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\btn_upload.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\list_bg1.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\list_bg1.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\danger_icon.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\danger_icon.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\mond.jpg",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\mond.jpg"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\upload.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\upload.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\retailer_selector.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\retailer_selector.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\pob_done.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\pob_done.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\list_selector.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\list_selector.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_exit.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\btn_exit.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_training.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\btn_training.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_salesthru.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\btn_salesthru.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\daily_entry_btn.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\daily_entry_btn.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\blue_btn_hover.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\blue_btn_hover.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\download_btn.xml",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\download_btn.xml"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\map_bg.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\map_bg.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\stock_done1.jpg",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\stock_done1.jpg"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\deactive_camera.png",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\deactive_camera.png"
+    },
+    {
+        "merged": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\res\\merged\\debug\\drawable\\sad_cloud.jpg",
+        "source": "F:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\src\\main\\res\\drawable\\sad_cloud.jpg"
+    }
+]

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/custom_margin"
+    android:paddingLeft="@dimen/custom_margin"
+    android:paddingRight="@dimen/custom_margin"
+    android:paddingTop="@dimen/custom_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.cpm.dailyentry.AssetNewActivity"
+    android:background="@color/grey_background">
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardview_exists"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardBackgroundColor="@color/white"
+        card_view:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/lay_window"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:weightSum="2">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:text="Exists"
+                    android:textColor="@color/grey_dark"
+                    android:textSize="@dimen/text_size_normal" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:id="@+id/checkboxlist1"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lay_refimageCamera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:id="@+id/rl_cam"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left">
+                    <ImageButton
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/image_asset"
+                        android:layout_width="53dp"
+                        android:layout_height="53dp"
+                        android:background="@drawable/cam_icon"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+                    <ImageButton
+                        android:id="@+id/refimage1"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/ic_action_picture_light"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/lay_remarks"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <EditText
+                    android:textSize="16dp"
+                    android:layout_marginLeft="8dp"
+                    android:inputType="textAutoCorrect"
+                    android:hint="Remarks (Optional)"
+                    android:padding="10dp"
+                    android:layout_toRightOf="@+id/textremark"
+                    android:id="@+id/remark_edtt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <requestFocus/>
+
+                <TextView
+                    android:gravity="center_horizontal"
+                    android:id="@+id/textremark"
+                    android:padding="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Remark"
+                    android:textSize="18dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+<LinearLayout
+    android:id="@+id/n"
+    android:layout_below="@+id/cardview_exists"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/brand_rl"
+        android:layout_marginTop="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Spinner
+            android:id="@+id/brand_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ></Spinner>
+
+        <Spinner
+            android:layout_marginTop="8dp"
+            android:id="@+id/sku_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ></Spinner>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@+id/brand_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="10"
+        >
+        <TextView
+            android:textSize="18sp"
+            android:text="Remarks"
+            android:layout_weight="4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/edt_stock"
+            android:inputType="number"
+            android:maxLength="5"
+            android:hint="Stock"
+            android:layout_weight="6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <requestFocus/>
+    </LinearLayout>
+</LinearLayout>
+
+    <ListView
+        android:id="@+id/stock_list"
+        android:layout_marginTop="4dp"
+        android:layout_below="@+id/n"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
+
+
+
+</RelativeLayout>

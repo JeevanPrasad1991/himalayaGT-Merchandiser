@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/r"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+                <TextView
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:background="@color/primarycolor"
+                    android:textSize="18dp"
+                    android:textColor="@color/white"
+                    android:text="Stock List"
+                    android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
+            android:id="@+id/m"
+           android:layout_above="@+id/w"
+            android:layout_below="@+id/r"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+                <ListView
+                    android:layout_margin="3dp"
+                    android:id="@+id/sku_list"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_alignParentBottom="true"
+            android:id="@+id/w"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+                <Button
+                    android:layout_alignParentLeft="true"
+                    android:id="@+id/save_sku"
+                    android:gravity="center"
+                    android:layout_marginLeft="2dp"
+                    android:background="@color/primarycolor"
+                    android:text="Save"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/no_sku"
+                    android:gravity="center"
+                    android:layout_marginRight="2dp"
+                    android:background="@color/primarycolor"
+                    android:text="Cancel"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                   />
+
+
+        </RelativeLayout>
+
+       <!-- <Button
+           android:id="@+id/save_sku"
+            android:gravity="center"
+            android:background="@color/primarycolor"
+            android:layout_marginLeft="110dp"
+            android:text="Save"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"/>-->
+
+
+</RelativeLayout>

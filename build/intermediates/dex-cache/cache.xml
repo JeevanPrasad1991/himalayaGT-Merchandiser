@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="F:\studio\Kellogg\KellogsGT\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="F:\studio\Kellogg\KellogsGT\build\intermediates\pre-dexed\release\internal_impl-23.1.1_dc809ea5d07b52e6a1d438290adf7bbd936e09e4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\studio\Kellogg\KellogsGT\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="f2df436a8f02ce7e4d7d209671fc45f97c470f0e">
+        <dex dex="F:\studio\Kellogg\KellogsGT\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-wallet-8.4.0_fb8a559208ba51f4048bb64516a822b4e5a5e1fa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\studio\Kellogg\KellogsGT\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="551e78f21acf69ebfb489c0e79647824c838013e">
+        <dex dex="F:\studio\Kellogg\KellogsGT\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-cast-8.4.0_23ef462f954b9ef4fe288db144110baeb09e39ce.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\studio\Kellogg\KellogsGT\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="b5e7892fb0708e792e0e933c4c0a0ca0ac7831fb">
+        <dex dex="F:\studio\Kellogg\KellogsGT\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-ads-8.4.0_98d02c311fe93b290dfa603ce3d8efa9d83bd55b.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.1.1_d7c4768f7ef8d38a16b3e0f812c0394ba940d637\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\studio\Kellogg\KellogsGT\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="613298b7aa012f121ce542881c0a599ebd8078f2">
+        <dex dex="F:\studio\Kellogg\KellogsGT\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-measurement-8.4.0_f6fcb092f927fc04a2f4b5707420a6051048d307.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\studio\Kellogg\KellogsGT\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="F:\studio\Kellogg\KellogsGT\build\intermediates\pre-dexed\release\com.android.support-appcompat-v7-23.1.1_0b5acf2fc7995b2f0da384d373abed77e89d83db.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="b5e7892fb0708e792e0e933c4c0a0ca0ac7831fb">
+        <dex dex="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-ads-8.4.0_4353e87e2fd18fc336827c65128c6b3a93740c80\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\studio\Kellogg\KellogsGT\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="65d086ee9daaf87b5af62ad24471edafa433354c">
+        <dex dex="F:\studio\Kellogg\KellogsGT\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-appindexing-8.4.0_04b85cbcc68ec1e4f26e360abff0e8363e4aa239.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\studio\Kellogg\KellogsGT\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="04de44f90606c77f3b28cf44861f306290505aac">
+        <dex dex="F:\studio\Kellogg\KellogsGT\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-maps-8.4.0_8a6a31e0263e6a28f8ae4d08f175f781db6d00e2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\studio\Kellogg\KellogsGT\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="b82b8e847173c28efffcd291b2a0b1ae9ad17fa4">
+        <dex dex="F:\studio\Kellogg\KellogsGT\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-identity-8.4.0_dc39b60397e973585d6f5b7314aa04f029f4d181.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\exploded-aar\com.android.support\design\23.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-23.1.1_b067f1133038d794f851224783f26ffa13074e3c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="966e5771a5a2ebfb31bf00d7cd6cd2546d245517">
+        <dex dex="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-auth-8.4.0_6d46a58d86bb2d62c72c290940d28aaf57cc3db5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\libs\acra-4.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="7864f0ac6c74d84e465aa5449fa14408b0a1418f">
+        <dex dex="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\transforms\dex\debug\folders\1000\2\acra-4.4.0_37a5788dfb64b3569157f42b95b77fbdd0ee0f1a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="1a78298e7724d5440d210bcb946b3493250d354d">
+        <dex dex="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-plus-8.4.0_8604cfd4b3e1e77b79a64ce22405b9b097511832\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\studio\Kellogg\KellogsGT\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="3a364cc6b698d1b3b2d284f64618daaa7fe77ddf">
+        <dex dex="F:\studio\Kellogg\KellogsGT\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-games-8.4.0_a44388a0c038549ff74811f335aa59383007b923.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="dfecc4d835cdabcdecf7e95f0d20a3ef1e9d8ef4">
+        <dex dex="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-vision-8.4.0_e5a4fc7c6921eae5143ae6af229fe7891e59302b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="a7e92206d41277af299eb6396664759d3e33a3de">
+        <dex dex="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_2b8d5430d481dc26bf388fefa21843be529a5425\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\23.0.0\jars\libs\internal_impl-23.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="03d38bb042efe3e5ce27ba66b729a9523c36d8fe">
+        <dex dex="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.0.0_544780f1de12f8c45bdfd8321a5a1b2ca63c2333\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="9cad249cf62751a323d9af568caf12284b7d6062">
+        <dex dex="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-nearby-8.4.0_fab4cbe297d43a1840914993103d0a9bd3c3f14d\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\studio\Kellogg\KellogsGT\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="0194a7409c40de94fb539d4ad9928ec5d47afeb7">
+        <dex dex="F:\studio\Kellogg\KellogsGT\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-safetynet-8.4.0_183355686297100838460f37a47c78b3cfd6888a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\studio\Kellogg\KellogsGT\libs\ksoap2-android-assembly-3.0.0-jar-with-dependencies.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="224c93f1824fa17b96db7250c2e5e2703d45e052">
+        <dex dex="F:\studio\Kellogg\KellogsGT\build\intermediates\pre-dexed\release\ksoap2-android-assembly-3.0.0-jar-with-dependencies_3bcd95779666d6abf26985a624d728be6def9af3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\studio\Kellogg\KellogsGT\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="08d34b2d135c1cc96ab506fd8bf6916d1e2f391a">
+        <dex dex="F:\studio\Kellogg\KellogsGT\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-panorama-8.4.0_88245372ad0d0a0cb7f2062e47571d35a8a2132f.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\libs\ksoap2-android-assembly-3.0.0-jar-with-dependencies.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="224c93f1824fa17b96db7250c2e5e2703d45e052">
+        <dex dex="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\transforms\dex\debug\folders\1000\2\ksoap2-android-assembly-3.0.0-jar-with-dependencies_434b432d8fd80a750a3f7af82b1a73044c32a75e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="65d086ee9daaf87b5af62ad24471edafa433354c">
+        <dex dex="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appindexing-8.4.0_b615e1450c2f3748763703d60c23505c2bdbc5e4\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\studio\Kellogg\KellogsGT\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
+        <dex dex="F:\studio\Kellogg\KellogsGT\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-base-8.4.0_8abd7b2c8aeb4ac96ca12b37404583d8296d0550.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\studio\Kellogg\KellogsGT\libs\acra-4.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="7864f0ac6c74d84e465aa5449fa14408b0a1418f">
+        <dex dex="F:\studio\Kellogg\KellogsGT\build\intermediates\pre-dexed\release\acra-4.4.0_aa387b5e3d8f049ae66427ed44bc2956534d21c4.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="1c9f35e952b212c843f7bd2c7eec8e82ad95602e">
+        <dex dex="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-analytics-8.4.0_bc1735d28549b6360900e370cb66d2767cc21ec3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="0194a7409c40de94fb539d4ad9928ec5d47afeb7">
+        <dex dex="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-safetynet-8.4.0_8472949e2c389858cc62d3a9bb93b203007266c8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="f2df436a8f02ce7e4d7d209671fc45f97c470f0e">
+        <dex dex="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wallet-8.4.0_9be1268e8987db2c0a0563855753e661332a7e46\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="3a364cc6b698d1b3b2d284f64618daaa7fe77ddf">
+        <dex dex="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-games-8.4.0_219b7371ef39cd605e19116ae2768e76f3546c09\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\studio\Kellogg\KellogsGT\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="2d7fe76982677315c4dc4edfb459c8ca718a9d4c">
+        <dex dex="F:\studio\Kellogg\KellogsGT\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-gcm-8.4.0_b9b3fbf1f89c6b45fdda0e5134b3b6eb15e0650f.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="a8412b654dab86d57bf90683367488211c8a81f1">
+        <dex dex="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-location-8.4.0_21b03bdcf62279b0f33156d5ba8f7cf7981db94f\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\studio\Kellogg\KellogsGT\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\23.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="d358b3dd49a7c67844622dcbc9cf4339e13952ce">
+        <dex dex="F:\studio\Kellogg\KellogsGT\build\intermediates\pre-dexed\release\com.android.support-mediarouter-v7-23.0.0_2eb00b3dccbb938538cec4743f558aea7e9cf200.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\studio\Kellogg\KellogsGT\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="e167a34eaca0b31704212f43f9576ea84e05046f">
+        <dex dex="F:\studio\Kellogg\KellogsGT\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-wearable-8.4.0_192dadf677b139d850f6a1c497dffb4caeb313d4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\studio\Kellogg\KellogsGT\build\intermediates\exploded-aar\com.github.ksoichiro\android-observablescrollview\1.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="d125b199a427e5cc8d4234f7d8673c9a27ef6336">
+        <dex dex="F:\studio\Kellogg\KellogsGT\build\intermediates\pre-dexed\release\com.github.ksoichiro-android-observablescrollview-1.6.0_1f772001068e2ccde5c654d08dfbf195eec9a8ef.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\studio\Kellogg\KellogsGT\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="1a78298e7724d5440d210bcb946b3493250d354d">
+        <dex dex="F:\studio\Kellogg\KellogsGT\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-plus-8.4.0_9f1f78572ef54ddba58ac661b5eb8b1822e42c60.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="b82b8e847173c28efffcd291b2a0b1ae9ad17fa4">
+        <dex dex="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-identity-8.4.0_377466ac66bfef87ee825e730a7c6fabb238242c\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\studio\Kellogg\KellogsGT\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="c54246475c1bb64ac6857d1320364bfbfeda2c46">
+        <dex dex="F:\studio\Kellogg\KellogsGT\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-fitness-8.4.0_5ff865814d1f65e00da8637280b0ace483ea161b.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
+        <dex dex="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-8.4.0_02753d61327ac01bdfae4c19d8e51a4c02d14fae\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\studio\Kellogg\KellogsGT\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="966e5771a5a2ebfb31bf00d7cd6cd2546d245517">
+        <dex dex="F:\studio\Kellogg\KellogsGT\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-auth-8.4.0_c2060110fa38ec1d7e6435d835278bc0e4ad84c3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\studio\Kellogg\KellogsGT\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="9fe026fb4c7fce21bc5142f6e1bdf844f28061ac">
+        <dex dex="F:\studio\Kellogg\KellogsGT\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-appinvite-8.4.0_56fe9080551fb2f94f03fa01ef5b69f0698d1dbe.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\exploded-aar\com.github.ksoichiro\android-observablescrollview\1.6.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="d125b199a427e5cc8d4234f7d8673c9a27ef6336">
+        <dex dex="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.ksoichiro-android-observablescrollview-1.6.0_c49322bb5122d98cf021b31106f7c8f3537f0620\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="F:\studio\Kellogg\KellogsGT\build\intermediates\pre-dexed\release\support-annotations-23.1.1_c4daa1e152330d24dbb2fe143bdda85cbbfa5f48.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\studio\Kellogg\KellogsGT\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="a8412b654dab86d57bf90683367488211c8a81f1">
+        <dex dex="F:\studio\Kellogg\KellogsGT\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-location-8.4.0_b0415cbc3858a1f8301052b612782db734b8f507.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-multidex-1.0.1_9cffcb5cde16044bc0ed0faa9d30ac47bcc0d9fe\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-8.4.0_69dc0f957191e52dc7ea1767b734f1b43f174623\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="2d7fe76982677315c4dc4edfb459c8ca718a9d4c">
+        <dex dex="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-gcm-8.4.0_f694e23b1fa70e0af389d9072f7f7e1771fa383e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="08d34b2d135c1cc96ab506fd8bf6916d1e2f391a">
+        <dex dex="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-panorama-8.4.0_118dfba734ab50afcd5d21aa2c63916208266ab6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.1.1_e69328631f18e467e57aa744d6ccf5db0b7a0741\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\23.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="d358b3dd49a7c67844622dcbc9cf4339e13952ce">
+        <dex dex="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-mediarouter-v7-23.0.0_51afaa1c9ed0e2d590d6a9aa0939aac0a596e845\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="9fe026fb4c7fce21bc5142f6e1bdf844f28061ac">
+        <dex dex="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appinvite-8.4.0_cbbaf12ab80faaddcfa0ca6ac2411ea64a5adaee\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\studio\Kellogg\KellogsGT\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="dfecc4d835cdabcdecf7e95f0d20a3ef1e9d8ef4">
+        <dex dex="F:\studio\Kellogg\KellogsGT\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-vision-8.4.0_83a13ea0029291ff086020bd54ab97f8f2d3c5dd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\studio\Kellogg\KellogsGT\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\23.0.0\jars\libs\internal_impl-23.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="03d38bb042efe3e5ce27ba66b729a9523c36d8fe">
+        <dex dex="F:\studio\Kellogg\KellogsGT\build\intermediates\pre-dexed\release\internal_impl-23.0.0_a0d362f90bfdee6cbc6b473b3b7c6109166b61b2.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="05fbbe7b07da3f688349d19eff10a1f676f1c866">
+        <dex dex="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_1b3bf4cb0c06b4bea3f0db7a1e377f638a16094a\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\studio\Kellogg\KellogsGT\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="9cad249cf62751a323d9af568caf12284b7d6062">
+        <dex dex="F:\studio\Kellogg\KellogsGT\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-nearby-8.4.0_cda8968c76c9104aa02b2b4a1f690513cd3bc25c.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="e167a34eaca0b31704212f43f9576ea84e05046f">
+        <dex dex="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wearable-8.4.0_e268b03403fb011e5aa6484de1601e0efc58843a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="613298b7aa012f121ce542881c0a599ebd8078f2">
+        <dex dex="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-measurement-8.4.0_d2e1c54c616ead03f1e16d3d2c360cb2c99ff3fe\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\studio\Kellogg\KellogsGT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="F:\studio\Kellogg\KellogsGT\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-basement-8.4.0_70a3393b0ac075c30f8993f8f246e51ad62b68c0.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.1.1_1397adeb00f2c0dfcf28e34ce81ff3aa69ec80d9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-23.1.1_76d89f876bf4e572128d773280008b0e85c6638c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="c54246475c1bb64ac6857d1320364bfbfeda2c46">
+        <dex dex="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-fitness-8.4.0_21ad28c3da5436c18a600d602610d529a1e893ee\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="551e78f21acf69ebfb489c0e79647824c838013e">
+        <dex dex="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-cast-8.4.0_dc5f16deb1029b9df1b986c00ba9a15581ef1874\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\studio\Kellogg\KellogsGT\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="5e412e954a24c5310a459c09870e4e2081aceb03">
+        <dex dex="F:\studio\Kellogg\KellogsGT\build\intermediates\pre-dexed\release\com.android.support-cardview-v7-23.1.1_eec5858505620509948b1874dbe3c882a8f82606.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="5e412e954a24c5310a459c09870e4e2081aceb03">
+        <dex dex="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-cardview-v7-23.1.1_31e7c204858028046617ecfa898f569772f046dc\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\studio\Kellogg\KellogsGT\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="F:\studio\Kellogg\KellogsGT\build\intermediates\pre-dexed\release\com.android.support-recyclerview-v7-23.1.1_802343afab999bc5391e3af89adfc3add03d0eaa.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.1.1_c4daa1e152330d24dbb2fe143bdda85cbbfa5f48\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\studio\Kellogg\KellogsGT\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="b36f30ac5ee5d5214f4b1e2ac49f11889d58e71a">
+        <dex dex="F:\studio\Kellogg\KellogsGT\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-drive-8.4.0_b2054752997a806c155f32be371cb2ecf58c78a3.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="b36f30ac5ee5d5214f4b1e2ac49f11889d58e71a">
+        <dex dex="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-drive-8.4.0_82b622269fd132f43b6b65108fc4350599432651\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\studio\Kellogg\KellogsGT\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="F:\studio\Kellogg\KellogsGT\build\intermediates\pre-dexed\release\com.android.support-support-v4-23.1.1_5151898ee573b3af2357076f0ce7618111a1715a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\studio\Kellogg\KellogsGT\build\intermediates\exploded-aar\com.android.support\design\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="F:\studio\Kellogg\KellogsGT\build\intermediates\pre-dexed\release\com.android.support-design-23.1.1_5dd8da6a89386b37ae3fff97c36a365de256c40d.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="04de44f90606c77f3b28cf44861f306290505aac">
+        <dex dex="F:\studio\workspace\New folder\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-maps-8.4.0_327395e8292d4207b134a981b623ae83d09371b1\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\studio\Kellogg\KellogsGT\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="1c9f35e952b212c843f7bd2c7eec8e82ad95602e">
+        <dex dex="F:\studio\Kellogg\KellogsGT\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-analytics-8.4.0_21da28bf1b7d08289985b9b2840ae1c418776b05.jar" />
+    </item>
+
+</items>
