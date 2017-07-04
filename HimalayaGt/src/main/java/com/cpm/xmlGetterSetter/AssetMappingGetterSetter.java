@@ -9,20 +9,16 @@ import java.util.ArrayList;
 
 public class AssetMappingGetterSetter implements Serializable {
     String tableassetmapping;
-
     public String getAsset_image() {
         return asset_image;
     }
-
     public void setAsset_image(String asset_image) {
         this.asset_image = asset_image;
     }
-
-    String asset_image;
+    String asset_image="";
     public boolean islisted() {
         return islisted;
     }
-
     public void setIslisted(boolean islisted) {
         this.islisted = islisted;
     }
@@ -46,17 +42,29 @@ public class AssetMappingGetterSetter implements Serializable {
         this.categorycd_mapping.add(categorycd_mapping);
     }
 
+    public String getExitOrNot() {
+        return ExitOrNot;
+    }
+
+    public void setExitOrNot(String exitOrNot) {
+        ExitOrNot = exitOrNot;
+    }
+
+    String ExitOrNot="";
+
     ArrayList<String>categorycd_mapping=new ArrayList<>();
     ArrayList<String>store_cd=new ArrayList<>();
-    public ArrayList<String> getKey_id() {
+
+
+    public int getKey_id() {
         return key_id;
     }
 
-    public void setKey_id(String key_id) {
-        this.key_id.add(key_id);
+    public void setKey_id(int key_id) {
+        this.key_id = key_id;
     }
 
-    ArrayList<String>key_id=new ArrayList<>();
+    int key_id=0;
     ArrayList<String>asset_cd=new ArrayList<>();
 
     public ArrayList<String> getAsset() {

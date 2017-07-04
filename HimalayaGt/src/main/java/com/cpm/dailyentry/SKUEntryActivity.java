@@ -135,7 +135,7 @@ String  remark="";
             @Override
             public void onClick(View view) {
                 if(skuEntryList.size()>0){
-                    long l = db.InsertWindowsData(store_cd, visit_date, username, window_cd, existOrnot, window_image,remark);
+                  //  long l = db.InsertWindowsData(store_cd, visit_date, username, window_cd, existOrnot, window_image,remark);
 
                     db.InsertSKUEntry(skuEntryList, window_cd, store_cd);
                     finish();

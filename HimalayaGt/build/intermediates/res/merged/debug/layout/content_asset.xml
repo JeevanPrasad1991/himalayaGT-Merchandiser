@@ -103,13 +103,12 @@
                     android:textSize="16dp"
                     android:layout_marginLeft="8dp"
                     android:inputType="textAutoCorrect"
-                    android:hint="Remarks (Optional)"
+                    android:hint="Remarks"
                     android:padding="10dp"
                     android:layout_toRightOf="@+id/textremark"
                     android:id="@+id/remark_edtt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
-                <requestFocus/>
 
                 <TextView
                     android:gravity="center_horizontal"
@@ -154,6 +153,7 @@
             ></Spinner>
     </LinearLayout>
     <LinearLayout
+        android:layout_marginTop="4dp"
         android:layout_below="@+id/brand_rl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -161,7 +161,7 @@
         >
         <TextView
             android:textSize="18sp"
-            android:text="Remarks"
+            android:text="Stock"
             android:layout_weight="4"
             android:layout_width="0dp"
             android:layout_height="wrap_content" />
@@ -173,14 +173,72 @@
             android:layout_weight="6"
             android:layout_width="0dp"
             android:layout_height="wrap_content" />
-        <requestFocus/>
     </LinearLayout>
 </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/rlk"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/n"
+        android:orientation="horizontal"
+        android:weightSum="12" >
+
+        <TextView
+            android:id="@+id/textVie"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="3sp"
+            android:layout_weight="4"
+            android:text="Brands"
+            android:gravity="center"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textVi"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="3sp"
+            android:layout_weight="4"
+            android:background="@color/colorPrimary"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:text="Sku"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/spinn"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:layout_marginLeft="3sp"
+            android:background="@color/colorPrimary"
+            android:textColor="#ffffff"
+            android:layout_weight="3"
+            android:paddingLeft="5dp"
+            android:text="Stock"
+            />
+        <TextView
+            android:id="@+id/closebtn1"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:layout_marginLeft="3sp"
+            android:background="@color/colorPrimary"
+            android:textColor="#ffffff"
+            android:layout_weight="1"
+            android:paddingLeft="5dp"
+            />
+    </LinearLayout>
+
 
     <ListView
         android:id="@+id/stock_list"
         android:layout_marginTop="4dp"
-        android:layout_below="@+id/n"
+        android:layout_below="@+id/rlk"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 

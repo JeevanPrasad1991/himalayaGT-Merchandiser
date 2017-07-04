@@ -11,6 +11,7 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.preference.PreferenceManager;
 import android.provider.MediaStore;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -45,7 +46,6 @@ import com.cpm.xmlGetterSetter.AssetMappingGetterSetter;
 import com.cpm.xmlGetterSetter.BrandGetterSetter;
 import com.cpm.xmlGetterSetter.POSMDATAGetterSetter;
 import com.cpm.xmlGetterSetter.SkuMasterGetterSetter;
-import com.github.clans.fab.FloatingActionMenu;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -54,9 +54,8 @@ import java.util.Calendar;
 import java.util.Collections;
 import java.util.List;
 
-
 public class SubAssetCategoryActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
-    FloatingActionMenu fab_mainMenu;
+    // FloatingActionMenu fab_mainMenu;
     String _pathforcheck = "", _path = "", str, state_cd, img1 = "", updat = "", a1, a2;
     Boolean existOrnot = true;
     String value1 = "";
@@ -80,14 +79,16 @@ public class SubAssetCategoryActivity extends AppCompatActivity implements View.
     ArrayAdapter<String> adaptersku;
     ArrayList<BrandGetterSetter> AddedAlldata = new ArrayList<>();
     ArrayList<BrandGetterSetter> insertedStockListData = new ArrayList<>();
+    boolean update_flag = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sub_asset_category);
-        fab_mainMenu = (FloatingActionMenu) findViewById(R.id.fab_menu_orderDelivery);
-        final com.github.clans.fab.FloatingActionButton fab = (com.github.clans.fab.FloatingActionButton) findViewById(R.id.fab);
-        final com.github.clans.fab.FloatingActionButton fab_sku = (com.github.clans.fab.FloatingActionButton) findViewById(R.id.sku_save);
+        final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        //  fab_mainMenu = (FloatingActionMenu) findViewById(R.id.fab_menu_orderDelivery);
+        //  final com.github.clans.fab.FloatingActionButton fab = (com.github.clans.fab.FloatingActionButton) findViewById(R.id.fab);
+        // final com.github.clans.fab.FloatingActionButton fab_sku = (com.github.clans.fab.FloatingActionButton) findViewById(R.id.sku_save);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         remark_edtt = (EditText) findViewById(R.id.remark_edtt);
@@ -99,7 +100,6 @@ public class SubAssetCategoryActivity extends AppCompatActivity implements View.
         sku_spinner = (Spinner) findViewById(R.id.sku_spinner);
         edt_stock = (EditText) findViewById(R.id.edt_stock);
         stock_list = (ListView) findViewById(R.id.stock_list);
-
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         preferences = PreferenceManager.getDefaultSharedPreferences(this);
@@ -116,7 +116,7 @@ public class SubAssetCategoryActivity extends AppCompatActivity implements View.
         planogram = current.getAdditional_image().get(0);
         asset_cd = current.getAsset_cd().get(0);
         getSupportActionBar().setTitle(current.getAsset().get(0));
-        _pathforcheck = store_cd + "ASSETIMG" + current.getAsset_cd().get(0) + "_" + visit_date.replace("/", "") +
+        _pathforcheck = store_cd + "_ASSETIMG_" + current.getAsset_cd().get(0) + "_" + visit_date.replace("/", "") +
                 "_" + getCurrentTime().replace(":", "") + ".jpg";
         brandList = db.getBrandDataViaCategory_cd(state_cd, store_type_cd, current.getCategory_id().get(0));
         skuMasterGetterSetterArrayList = db.getAssetSkuMasterData(state_cd, store_type_cd, current.getCategory_id().get(0), brandList.get(0).getBrand_cd().get(0));
@@ -141,60 +141,30 @@ public class SubAssetCategoryActivity extends AppCompatActivity implements View.
         fab.setOnClickListener(this);
         image_asset.setOnClickListener(this);
         refimage1.setOnClickListener(this);
-        fab_sku.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                stock_list.clearFocus();
-                stock_list.invalidateViews();
-                if (validateskuandBrand()) {
-                    AlertDialog.Builder builder = new AlertDialog.Builder(SubAssetCategoryActivity.this);
-                    builder.setMessage("Are you sure you want to save")
-                            .setCancelable(false)
-                            .setPositiveButton("Yes",
-                                    new DialogInterface.OnClickListener() {
-                                        public void onClick(DialogInterface dialog, int id) {
-                                            db.open();
-                                            BrandGetterSetter brandGetterSetter = new BrandGetterSetter();
-                                            String brandspinValue = brand_spinner.getSelectedItem().toString();
-                                            brandGetterSetter.setBrand(brandspinValue);
-                                            String skuSpinValue = sku_spinner.getSelectedItem().toString();
-                                            brandGetterSetter.setSku(skuSpinValue);
-                                            long str = brand_spinner.getSelectedItemId();
-                                            String strLongBrandid = Long.toString(str);
-                                            long str1 = sku_spinner.getSelectedItemId();
-                                            String strLongSkuId = Long.toString(str1);
-                                            brandGetterSetter.setBrand_cd(strLongBrandid);
-                                            brandGetterSetter.setSku_cd(strLongSkuId);
-                                            brandGetterSetter.setSkuQuantity(edt_stock.getText().toString().replaceAll("[-@.?/|=+_#%:;^*()!&^<>{},'$0]", ""));
-                                            AddedAlldata.add(brandGetterSetter);
-                                            db.insertAssetStockData(store_cd, state_cd, category_cd, AddedAlldata);
-                                            Snackbar.make(stock_list, "Data has been saved", Snackbar.LENGTH_SHORT).show();
-                                            img1 = "";
-                                            brand_spinner.setSelection(0);
-                                            sku_spinner.setSelection(0);
-                                            AddedAlldata.clear();
-                                            brandGetterSetter.setSkuQuantity("");
-                                            setDataToListView();
-                                            insertedStockListData.clear();
-
-                                        }
-                                    })
-                            .setNegativeButton("No",
-                                    new DialogInterface.OnClickListener() {
-                                        public void onClick(DialogInterface dialog,
-                                                            int id) {
-                                            dialog.cancel();
-                                        }
-                                    });
-                    AlertDialog alert = builder.create();
-
-                    alert.show();
-
-                } else {
-                    Snackbar.make(stock_list, Error_Message, Snackbar.LENGTH_SHORT).show();
-                }
+        assetMappingGetterSetter = db.getassetinsertedData(store_cd, asset_cd, category_cd);
+        if (assetMappingGetterSetter.getKey_id() != 0) {
+            update_flag = true;
+            if (!assetMappingGetterSetter.getAsset_image().equalsIgnoreCase("")) {
+                image_asset.setBackgroundResource(R.drawable.cam_icon_done);
+            } else {
+                image_asset.setBackgroundResource(R.drawable.cam_icon);
             }
-        });
+
+
+            if (!assetMappingGetterSetter.getRemark().equalsIgnoreCase("")) {
+                remark_edtt.setText(assetMappingGetterSetter.getRemark());
+            }
+
+        }
+        if (update_flag) {
+            if (!assetMappingGetterSetter.islisted()) {
+                checkboxlist1.setChecked(assetMappingGetterSetter.islisted());
+                rl_cam.setVisibility(View.INVISIBLE);
+            } else {
+                rl_cam.setVisibility(View.VISIBLE);
+            }
+        }
+
         setDataToListView();
         checkboxlist1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -204,7 +174,7 @@ public class SubAssetCategoryActivity extends AppCompatActivity implements View.
                     rl_cam.setVisibility(View.VISIBLE);
                 } else {
                     AlertDialog.Builder builder = new AlertDialog.Builder(SubAssetCategoryActivity.this);
-                    builder.setMessage("Are you sure you want to close the window")
+                    builder.setMessage("Are you sure you want to close the asset window")
                             .setTitle("Parinaam")
                             .setCancelable(false)
                             .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
@@ -240,6 +210,7 @@ public class SubAssetCategoryActivity extends AppCompatActivity implements View.
 
 
     }
+
     public String getCurrentTime() {
         Calendar m_cal = Calendar.getInstance();
         SimpleDateFormat formatter = new SimpleDateFormat("HH:mm:ss");
@@ -249,17 +220,18 @@ public class SubAssetCategoryActivity extends AppCompatActivity implements View.
 
     public Boolean validateimagedata() {
         boolean isgood = true;
-        if (assetMappingGetterSetter.getAsset_image().equalsIgnoreCase("")) {
-            isgood = false;
-            Snackbar.make(stock_list, "Please click image", Snackbar.LENGTH_LONG).show();
-        } else if (assetMappingGetterSetter.islisted() == false) {
-            if (remark_edtt.getText().toString().toString().equalsIgnoreCase("")) {
+        if (assetMappingGetterSetter.islisted()) {
+            if (assetMappingGetterSetter.getAsset_image().equalsIgnoreCase("")) {
                 isgood = false;
-                Snackbar.make(stock_list, "Please enter remark", Snackbar.LENGTH_LONG).show();
+                Snackbar.make(stock_list, "Please click asset image", Snackbar.LENGTH_LONG).show();
+            } else {
+                isgood = true;
             }
-        } else {
-            isgood = true;
+        } else if (remark_edtt.getText().toString().equalsIgnoreCase("")) {
+            isgood = false;
+            Snackbar.make(stock_list, "Please enter remark", Snackbar.LENGTH_LONG).show();
         }
+
         return isgood;
     }
 
@@ -278,37 +250,88 @@ public class SubAssetCategoryActivity extends AppCompatActivity implements View.
                 startCameraActivity();
                 break;
             case R.id.fab:
-                if (validateimagedata()) {
-                    if (insertedStockListData.size()>0){
-                        AlertDialog.Builder builder = new AlertDialog.Builder(SubAssetCategoryActivity.this);
-                        builder.setMessage("Do you want to save checklist data");
-                        builder.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-
-                            }
-                        });
-
-                        builder.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.dismiss();
-                            }
-                        });
-                        builder.show();
-
-                    }else {
-                        Snackbar.make(stock_list, "Please fill atleast one sku quantity ", Snackbar.LENGTH_LONG).show();
+                stock_list.clearFocus();
+                stock_list.invalidateViews();
+                if (validateDuplicate()) {
+                    if (validateimagedata()) {
+                        if (validateskuandBrand()) {
+                            AlertDialog.Builder builder = new AlertDialog.Builder(SubAssetCategoryActivity.this);
+                            builder.setMessage("Do you want to save asset data");
+                            builder.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    db.open();
+                                    BrandGetterSetter brandGetterSetter = new BrandGetterSetter();
+                                    String brandspinValue = brand_spinner.getSelectedItem().toString();
+                                    brandGetterSetter.setBrand(brandspinValue);
+                                    String skuSpinValue = sku_spinner.getSelectedItem().toString();
+                                    brandGetterSetter.setSku(skuSpinValue);
+                                    long str = brand_spinner.getSelectedItemId();
+                                    String strLongBrandid = Long.toString(str);
+                                    long str1 = sku_spinner.getSelectedItemId();
+                                    String strLongSkuId = Long.toString(str1);
+                                    brandGetterSetter.setBrand_cd(strLongBrandid);
+                                    brandGetterSetter.setSku_cd(strLongSkuId);
+                                    brandGetterSetter.setSkuQuantity(edt_stock.getText().toString().replaceAll("[-@.?/|=+_#%:;^*()!&^<>{},'$0]", ""));
+                                    AddedAlldata.add(brandGetterSetter);
+                                    db.insertassetData(store_cd, asset_cd, assetMappingGetterSetter.islisted(),
+                                            assetMappingGetterSetter.getAsset_image(), remark_edtt.getText().toString().
+                                                    replaceAll("!@#$%^&*(,)", "").trim(), category_cd, state_cd, AddedAlldata);
+                                    //db.insertAssetStockData(store_cd, asset_cd, state_cd, category_cd, AddedAlldata, key_id);
+                                    startActivity(new Intent(SubAssetCategoryActivity.this, AssetNewActivity.class));
+                                    overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
+                                    finish();
+                                    Snackbar.make(stock_list, "Data has been saved", Snackbar.LENGTH_SHORT).show();
+                                    img1 = "";
+                                    edt_stock.setText("");
+                                    brand_spinner.setSelection(0);
+                                    sku_spinner.setSelection(0);
+                                    AddedAlldata.clear();
+                                    brandGetterSetter.setSkuQuantity("");
+                                    setDataToListView();
+                                    insertedStockListData.clear();
+                                }
+                            });
+                            builder.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
+                                }
+                            });
+                            builder.show();
+                        } else {
+                            Snackbar.make(stock_list, Error_Message, Snackbar.LENGTH_LONG).show();
+                        }
                     }
-
+                } else {
+                    Snackbar.make(stock_list, "This sku already added!", Snackbar.LENGTH_LONG).show();
                 }
+
         }
 
     }
 
+    boolean validateDuplicate() {
+        boolean flag = true;
+        db.open();
+        insertedStockListData = db.getAssetStockSavedData(store_cd, category_cd, asset_cd);
+        String value = String.valueOf(sku_spinner.getSelectedItemId());
+        if (insertedStockListData.size() > 0) {
+            for (int i = 0; i < insertedStockListData.size(); i++) {
+                if (insertedStockListData.get(i).getSku_cd().get(0).equalsIgnoreCase(value)) {
+                    flag = false;
+                    break;
+                }
+            }
+        }
+        return flag;
+    }
+
+
     public void setDataToListView() {
         try {
-            insertedStockListData = db.getAssetStockSavedData(store_cd, category_cd);
+            insertedStockListData = db.getAssetStockSavedData(store_cd, category_cd, asset_cd);
+            db.getAssetStockSavedDataByCommonid(assetMappingGetterSetter.getKey_id());
             if (insertedStockListData.size() > 0) {
                 for (int i = 0; i < insertedStockListData.size(); i++) {
                     BrandGetterSetter secdata = new BrandGetterSetter();
@@ -397,6 +420,7 @@ public class SubAssetCategoryActivity extends AppCompatActivity implements View.
                     if (new File(str + _pathforcheck).exists()) {
                         image_asset.setBackgroundResource(R.drawable.cam_icon_done);
                         img1 = _pathforcheck;
+                        assetMappingGetterSetter.setAsset_image(img1);
                         _pathforcheck = "";
                     }
                 }

@@ -84,7 +84,7 @@
     <string name="title_activity_additional_poi">AdditionalPOIActivity</string>
     <string name="title_activity_gate_meeting">GateMeetingActivity</string>
     <string name="title_activity_geo_fence_">GeoFence_Activity</string>
-    <string name="title_activity_secondary_window">Secondary Window</string>
+    <string name="title_activity_secondary_window">Monthly Visibility</string>
     <string name="title_activity_checklist">Window</string>
     <string name="title_activity_skuentry">SKU Entry</string>
 

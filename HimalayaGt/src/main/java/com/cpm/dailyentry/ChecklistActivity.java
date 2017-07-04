@@ -126,7 +126,6 @@ public class ChecklistActivity extends AppCompatActivity implements View.OnClick
         getSupportActionBar().setTitle(window_name);
         image_window.setOnClickListener(this);
         refimage.setOnClickListener(this);
-        //prepareSkuquantityData();
         windowListGetterSetter = db.getUpdatedWindowListData(window_cd, store_cd);
         if (windowListGetterSetter.getKey_id() != 0) {
             update_flag = true;
@@ -136,25 +135,19 @@ public class ChecklistActivity extends AppCompatActivity implements View.OnClick
                 image_window.setBackgroundResource(R.drawable.cam_icon);
             }
 
-
             if (!windowListGetterSetter.getRemark().equalsIgnoreCase("")) {
                 edt_remarks.setText(windowListGetterSetter.getRemark());
             }
-            //key_id = windowListGetterSetter.getKey_id();
 
         }
 
         if (update_flag) {
             check = windowListGetterSetter.islisted();
-            if (check == false) {
+            if (!check) {
                 checkBox.setChecked(check);
                 rec_checklist.setVisibility(View.GONE);
             } else {
-                // lay_refimageCamera.setVisibility(View.VISIBLE);
-                // lay_remarks.setVisibility(View.VISIBLE);
                 rec_checklist.setVisibility(View.VISIBLE);
-                // lay_remarks.setEnabled(true);
-                //lay_refimageCamera.setEnabled(true);
             }
 
             skuListData = db.getWindowSkuQuantityInsertedDataByCommonid(windowListGetterSetter.getKey_id());
@@ -227,7 +220,7 @@ public class ChecklistActivity extends AppCompatActivity implements View.OnClick
                             dialog.dismiss();
                             windowListGetterSetter.setSkuQuantityList(skuListData);
                         } else {
-                            Toast.makeText(ChecklistActivity.this, "Please fill at least one sku quantity ", Toast.LENGTH_LONG).show();
+                           // Toast.makeText(ChecklistActivity.this, "Please fill at least one sku quantity ", Toast.LENGTH_LONG).show();
                             Snackbar.make(sku_list, "Please fill at least one sku quantity ", Snackbar.LENGTH_LONG).show();
                         }
                     }
@@ -249,21 +242,21 @@ public class ChecklistActivity extends AppCompatActivity implements View.OnClick
                             builder.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-                                    if (windowListGetterSetter.islisted() == false) {
-                                        long key_id = db.InsertWindowsData(store_cd, visit_date, username, window_cd, false,
+                                    if (!windowListGetterSetter.islisted()) {
+                                        db.InsertWindowsDataWithChecklist(store_cd, visit_date, username, window_cd, false,
                                                 windowListGetterSetter.getWindow_image(), edt_remarks.getText().toString()
-                                                        .trim().replaceAll("^&0@+(?!$)", ""));
+                                                        .trim().replaceAll("^&0@+(?!$)", ""), brand_cd, skuListData);
                                         db.deleteCheckListInsertedData(window_cd, store_cd);
-                                        db.insertWindowSkuQwantity(store_cd, brand_cd, skuListData, key_id);
+                                       // db.insertWindowSkuQwantity(store_cd, brand_cd, skuListData, key_id);
                                         startActivity(new Intent(ChecklistActivity.this, SecondaryWindowActivity.class));
                                         finish();
                                         Snackbar.make(rec_checklist, "Window data save successfully", Snackbar.LENGTH_LONG).show();
                                     } else {
-                                        long key_id = db.InsertWindowsData(store_cd, visit_date, username, window_cd, existOrnot,
-                                                windowListGetterSetter.getWindow_image(), edt_remarks.getText().toString().trim()
-                                                        .replaceAll("^&0@+(?!$)", ""));
-                                        db.InsertCheckListData(store_cd, username, window_cd, answered_list, key_id);
-                                        db.insertWindowSkuQwantity(store_cd, brand_cd, skuListData, key_id);
+                                       db.InsertWindowsData(store_cd, visit_date, username, window_cd, existOrnot,
+                                                windowListGetterSetter.getWindow_image(), edt_remarks.getText().toString().trim().replaceAll("^&0@+(?!$)", ""),
+                                                answered_list, brand_cd, skuListData);
+                                       // db.InsertCheckListData(store_cd, username, window_cd, answered_list, key_id);
+                                       // db.insertWindowSkuQwantity(store_cd, brand_cd, skuListData, key_id);
                                         Snackbar.make(rec_checklist, "Window data save successfully", Snackbar.LENGTH_LONG).show();
                                         startActivity(new Intent(ChecklistActivity.this, SecondaryWindowActivity.class));
                                         finish();
@@ -322,7 +315,6 @@ public class ChecklistActivity extends AppCompatActivity implements View.OnClick
             @Override
             public void onCheckedChanged(CompoundButton buttonView, final boolean isChecked) {
                 if (isChecked) {
-
                     windowListGetterSetter.setIslisted(true);
                     lay_refimageCamera.setVisibility(View.VISIBLE);
                     lay_remarks.setVisibility(View.VISIBLE);
@@ -341,9 +333,6 @@ public class ChecklistActivity extends AppCompatActivity implements View.OnClick
                                     lay_refimageCamera.setVisibility(View.VISIBLE);
                                     lay_remarks.setVisibility(View.VISIBLE);
                                     windowListGetterSetter.setIslisted(false);
-                                   /* if (windowListGetterSetter.getWindow_image() == null) {
-                                        Snackbar.make(rec_checklist, "Please click image", Snackbar.LENGTH_LONG).show();
-                                    }*/
                                 }
 
                             }).setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -552,7 +541,7 @@ public class ChecklistActivity extends AppCompatActivity implements View.OnClick
         boolean isgood = true;
         if (windowListGetterSetter.getWindow_image() == null || windowListGetterSetter.getWindow_image().equalsIgnoreCase("")) {
             isgood = false;
-            Snackbar.make(rec_checklist, "Please click image", Snackbar.LENGTH_LONG).show();
+            Snackbar.make(rec_checklist, "Please click window image", Snackbar.LENGTH_LONG).show();
         }
         return isgood;
     }
@@ -573,7 +562,7 @@ public class ChecklistActivity extends AppCompatActivity implements View.OnClick
 
     public Boolean validate_checklist_data() {
         boolean isgood = true;
-        if (windowListGetterSetter.islisted() == true) {
+        if (windowListGetterSetter.islisted()) {
             if (answered_list.size() > 0) {
                 for (int i = 0; i < answered_list.size(); i++) {
                     if (answered_list.get(i).getANSWER_CD().equals("0")) {

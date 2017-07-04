@@ -9,7 +9,6 @@ import java.util.ArrayList;
 public class WindowListGetterSetter implements Serializable{
 
     ArrayList<String> window_cd = new ArrayList<>();
-
     public ArrayList<SkuQwantityGetterSetter> getSkuQuantityList() {
         return skuQuantityList;
     }
@@ -20,6 +19,15 @@ public class WindowListGetterSetter implements Serializable{
 
     ArrayList<SkuQwantityGetterSetter> skuQuantityList = new ArrayList<>();
 
+    public ArrayList<String> getExitOrNot() {
+        return exitOrNot;
+    }
+
+    public void setExitOrNot(String exitOrNot) {
+        this.exitOrNot.add(exitOrNot);
+    }
+
+    ArrayList<String>exitOrNot=new ArrayList<>();
 
 
     public int getKey_id() {

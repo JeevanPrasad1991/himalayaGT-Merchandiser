@@ -39,11 +39,9 @@ import android.widget.ToggleButton;
 import com.cpm.Constants.CommonString1;
 import com.cpm.capitalfoods.R;
 import com.cpm.database.GSKDatabase;
-import com.cpm.delegates.CoverageBean;
 import com.cpm.xmlGetterSetter.AssetMappingGetterSetter;
 import com.cpm.xmlGetterSetter.CategoryMasterGetterSetter;
 import com.cpm.xmlGetterSetter.POSMDATAGetterSetter;
-import com.cpm.xmlGetterSetter.windowsChildData;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -116,10 +114,10 @@ public class AdditionalVisibilityActivity extends AppCompatActivity implements V
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    //rl_camera.setVisibility(View.VISIBLE);
+                    toggle_value = 1;
                 } else {
                     toggle_value = 0;
-                    // rl_camera.setVisibility(View.GONE);
+
                 }
             }
         });
@@ -152,7 +150,6 @@ public class AdditionalVisibilityActivity extends AppCompatActivity implements V
                                             secdata.setToglvale(String.valueOf(toggle_value));
                                             secdata.setRemark(edt_remark.getText().toString().replaceAll("[-@.?/|=+_#%:;^*()!&^<>{},'$0]", ""));
                                             secPlaceData.add(secdata);
-                                            //db.deletePromotionData(store_cd);
                                             db.insertAdditionalVisibilityData(store_cd, secPlaceData);
                                             Snackbar.make(addbtn, "Data has been saved", Snackbar.LENGTH_SHORT).show();
                                             img1 = "";
@@ -160,6 +157,7 @@ public class AdditionalVisibilityActivity extends AppCompatActivity implements V
                                             spinner.setSelection(0);
                                             secPlaceData.clear();
                                             secdata.setRemark("");
+                                            edt_remark.setText("");
                                             list.clear();
                                             setDataToListView();
 
@@ -322,14 +320,14 @@ public class AdditionalVisibilityActivity extends AppCompatActivity implements V
 
     public void setDataToListView() {
         try {
-            list = db.getAssetMappingData(store_cd);
+            list = db.getAdditionalinsertedData(store_cd);
             if (list.size() > 0) {
                 for (int i = 0; i < list.size(); i++) {
                     AssetMappingGetterSetter secdata = new AssetMappingGetterSetter();
                     secdata.setCategory_id(list.get(i).getCategory_id().get(0));
                     secdata.setCategory(list.get(i).getCategory().get(0));
                     secdata.setAdditional_image(list.get(i).getAdditional_image().get(0));
-                    secdata.setKey_id(list.get(i).getKey_id().get(0));
+                    secdata.setKey_id(list.get(i).getKey_id());
                     secdata.setToglvale(list.get(i).getToglvale().get(0));
                     secdata.setRemark(list.get(i).getRemark());
                     secPlaceData.add(secdata);
@@ -397,7 +395,7 @@ public class AdditionalVisibilityActivity extends AppCompatActivity implements V
                 holder.ImageURL = (ImageView) convertView.findViewById(R.id.txt_imageurl);
                 holder.toggle_vslue = (TextView) convertView.findViewById(R.id.txt_toggle);
                 holder.delRow = (ImageView) convertView.findViewById(R.id.imgDelRow1);
-               // holder.txt_remark_row = (TextView) convertView.findViewById(R.id.txt_remark_row);
+                // holder.txt_remark_row = (TextView) convertView.findViewById(R.id.txt_remark_row);
                 convertView.setTag(holder);
 
             } else {
@@ -423,7 +421,7 @@ public class AdditionalVisibilityActivity extends AppCompatActivity implements V
                             .setPositiveButton("Yes",
                                     new DialogInterface.OnClickListener() {
                                         public void onClick(DialogInterface dialog, int id) {
-                                            String listid = secPlaceData.get(position).getKey_id().get(0);
+                                            String listid = String.valueOf(secPlaceData.get(position).getKey_id());
                                             db.remove(listid);
                                             notifyDataSetChanged();
                                             secPlaceData.remove(position);
@@ -434,8 +432,6 @@ public class AdditionalVisibilityActivity extends AppCompatActivity implements V
                                             }
                                             list2.setAdapter(new MyAdapter());
                                             list2.invalidateViews();
-
-
                                         }
                                     })
                             .setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -511,7 +507,7 @@ public class AdditionalVisibilityActivity extends AppCompatActivity implements V
     boolean validateDuplicate() {
         boolean flag = true;
         db.open();
-        list = db.getAssetMappingData(store_cd);
+        list = db.getAdditionalinsertedData(store_cd);
         String value = String.valueOf(spinner.getSelectedItemId());
         if (list.size() > 0) {
             for (int i = 0; i < list.size(); i++) {

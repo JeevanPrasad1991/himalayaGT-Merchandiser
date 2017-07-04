@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Kellogg.iml" filepath="$PROJECT_DIR$/Kellogg.iml" />
-      <module fileurl="file://$PROJECT_DIR$/KellogsGT/KellogsGT.iml" filepath="$PROJECT_DIR$/KellogsGT/KellogsGT.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HimalayaGt/HimalayaGt.iml" filepath="$PROJECT_DIR$/HimalayaGt/HimalayaGt.iml" />
       <module fileurl="file://$PROJECT_DIR$/cardview/cardview.iml" filepath="$PROJECT_DIR$/cardview/cardview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/himalayaGT-Merchandiser.iml" filepath="$PROJECT_DIR$/himalayaGT-Merchandiser.iml" />
     </modules>
   </component>
 </project>

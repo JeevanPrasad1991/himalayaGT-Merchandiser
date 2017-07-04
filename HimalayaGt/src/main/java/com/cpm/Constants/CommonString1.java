@@ -1206,6 +1206,7 @@ public class CommonString1 {
     public static final String TABLE_INSERT_POSM_DATA = "POSM_data";
     public static final String TABLE_INSERT_ADDITIONAL_VISIBILITY_DATA = "ADDITIONAL_VISIBILITY";
     public static final String TABLE_INSERT_ASSET_STOCK_DATA = "ASSET_STOCK";
+    public static final String TABLE_INSERT_ASSET_DATA = "ASSET_DATA";
 
     public static final String CREATE_TABLE_INSERT_POSM_DATA = "CREATE TABLE IF NOT EXISTS "
             + TABLE_INSERT_POSM_DATA
@@ -1241,6 +1242,23 @@ public class CommonString1 {
             + " VARCHAR,"
             + "STORE_CD" + " INTEGER)";
 
+    public static final String CREATE_TABLE_INSERT_ASSET_DATA = "CREATE TABLE IF NOT EXISTS "
+            + TABLE_INSERT_ASSET_DATA
+            + "("
+            + "KEY_ID"
+            + " INTEGER PRIMARY KEY AUTOINCREMENT ,"
+            + "ASSET_IMG"
+            + " VARCHAR,"
+            + "ASSET_CD"
+            + " INTEGER,"
+            + "CATEGORY_CD"
+            + " INTEGER,"
+            + "EXITORNOT"
+            + " INTEGER,"
+            + "REMARK"
+            + " VARCHAR,"
+            + "STORE_CD" + " INTEGER)";
+
     public static final String CREATE_TABLE_INSERT_ASSET_STOCK_DATA = "CREATE TABLE IF NOT EXISTS "
             + TABLE_INSERT_ASSET_STOCK_DATA
             + "("
@@ -1252,11 +1270,15 @@ public class CommonString1 {
             + " INTEGER,"
             + "SKU_CD"
             + " INTEGER,"
+            + "COMMON_ID"
+            + " INTEGER,"
             + "SKU"
             + " VARCHAR,"
             + "BRAND"
             + " VARCHAR,"
             + "STOCK_QUANTITY"
+            + " INTEGER,"
+            + "ASSET_CD"
             + " INTEGER,"
             + "STATE_CD"
             + " INTEGER,"

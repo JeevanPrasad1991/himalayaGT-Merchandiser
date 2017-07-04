@@ -1,4 +1,4 @@
-#Thu Jun 22 20:01:26 IST 2017
+#Fri Jun 30 12:54:49 IST 2017
 base.0=F\:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
 renamed.0=classes.dex
 file.0=F\:\\jeevanAndroidProject\\androidProject\\himalayaGT-Merchandiser\\HimalayaGt\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex

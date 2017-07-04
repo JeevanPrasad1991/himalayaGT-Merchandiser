@@ -149,7 +149,6 @@ public class DailyEntryScreen extends AppCompatActivity implements OnItemClickLi
     }
 
 
-
     private class MyAdapter extends BaseAdapter {
         @Override
         public int getCount() {
@@ -417,7 +416,6 @@ public class DailyEntryScreen extends AppCompatActivity implements OnItemClickLi
 
                     dialog.cancel();
                     boolean flag = true;
-
                     if (coverage.size() > 0) {
                         for (int i = 0; i < coverage.size(); i++) {
                             if (store_cd.equals(coverage.get(i).getStoreId())) {
@@ -427,7 +425,7 @@ public class DailyEntryScreen extends AppCompatActivity implements OnItemClickLi
                         }
                     }
 
-                    if (flag == true) {
+                    if (flag) {
                         Intent in = new Intent(DailyEntryScreen.this, StoreimageActivity.class);
                         startActivity(in);
                         finish();
@@ -460,7 +458,7 @@ public class DailyEntryScreen extends AppCompatActivity implements OnItemClickLi
                                                 editor.commit();
                                                 Intent in = new Intent(DailyEntryScreen.this, NonWorkingReason.class);
                                                 startActivity(in);
-                                               // finish();
+                                                // finish();
 
                                             }
                                         })
@@ -484,7 +482,7 @@ public class DailyEntryScreen extends AppCompatActivity implements OnItemClickLi
                         editor.commit();
                         Intent in = new Intent(DailyEntryScreen.this, NonWorkingReason.class);
                         startActivity(in);
-                       // finish();
+                        // finish();
                     }
                 }
             }

@@ -4,13 +4,11 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.StringReader;
-import java.net.MalformedURLException;
 import java.util.ArrayList;
 
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
-import org.json.JSONArray;
 import org.ksoap2.SoapEnvelope;
 import org.ksoap2.serialization.SoapObject;
 import org.ksoap2.serialization.SoapSerializationEnvelope;
@@ -34,26 +32,26 @@ import android.preference.PreferenceManager;
 import android.view.WindowManager;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.cpm.Constants.CommonString1;
 import com.cpm.database.GSKDatabase;
 import com.cpm.delegates.CoverageBean;
-import com.cpm.delegates.StoreBean;
 
 import com.cpm.capitalfoods.R;
 import com.cpm.himalayaGT.MainMenuActivity;
 import com.cpm.message.AlertMessage;
 import com.cpm.retrofit.RetrofitClass;
-import com.cpm.xmlGetterSetter.COMPETITORGetterSetter;
+import com.cpm.xmlGetterSetter.AssetMappingGetterSetter;
+import com.cpm.xmlGetterSetter.BrandGetterSetter;
 import com.cpm.xmlGetterSetter.ChecklistGetterSetter;
 import com.cpm.xmlGetterSetter.FailureGetterSetter;
 import com.cpm.xmlGetterSetter.FeedBackGetterSetter;
 import com.cpm.xmlGetterSetter.JourneyPlanGetterSetter;
 import com.cpm.xmlGetterSetter.POSMDATAGetterSetter;
+import com.cpm.xmlGetterSetter.SkuQwantityGetterSetter;
 import com.cpm.xmlGetterSetter.StoreSignAgeGetterSetter;
 import com.cpm.xmlGetterSetter.StockNewGetterSetter;
-import com.cpm.xmlGetterSetter.WindowSKUEntryGetterSetter;
+import com.cpm.xmlGetterSetter.WindowListGetterSetter;
 import com.cpm.xmlHandler.FailureXMLHandler;
 
 @SuppressWarnings("deprecation")
@@ -66,35 +64,27 @@ public class UploadDataActivity extends Activity {
     private String visit_date, username;
     private SharedPreferences preferences;
     private GSKDatabase database;
-    private String reasonid, faceup, stock, length;
-    private int factor, k;
     String datacheck = "";
     String[] words;
-    String validity, storename;
+    String validity;
     int mid;
-    String sod = "";
-    String total_sku = "";
-    String sku = "";
-    String sos_data = "";
-    String category_data = "";
     Data data;
 
     private ArrayList<CoverageBean> coverageBeanlist = new ArrayList<CoverageBean>();
-
     private FailureGetterSetter failureGetterSetter = null;
     private ArrayList<StoreSignAgeGetterSetter> SignAgeData = new ArrayList<StoreSignAgeGetterSetter>();
-    private ArrayList<WindowSKUEntryGetterSetter> window1 = new ArrayList<WindowSKUEntryGetterSetter>();
-    private ArrayList<WindowSKUEntryGetterSetter> window2 = new ArrayList<WindowSKUEntryGetterSetter>();
+    private ArrayList<WindowListGetterSetter> window1 = new ArrayList<>();
     private ArrayList<ChecklistGetterSetter> check1 = new ArrayList<ChecklistGetterSetter>();
     private ArrayList<POSMDATAGetterSetter> POSMdata = new ArrayList<POSMDATAGetterSetter>();
-    private ArrayList<COMPETITORGetterSetter> COMPETITORDATA = new ArrayList<COMPETITORGetterSetter>();
     private ArrayList<StockNewGetterSetter> stockData = new ArrayList<StockNewGetterSetter>();
     private ArrayList<StockNewGetterSetter> stockCategoryImageData = new ArrayList<StockNewGetterSetter>();
-    boolean upload_status;
+    private ArrayList<SkuQwantityGetterSetter> windowskuQuantityList = new ArrayList<SkuQwantityGetterSetter>();
+    private ArrayList<AssetMappingGetterSetter> assetData = new ArrayList<>();
+    ArrayList<BrandGetterSetter> assetStockData = new ArrayList<>();
+    private ArrayList<AssetMappingGetterSetter> additional_visibility = new ArrayList<AssetMappingGetterSetter>();
     String Path;
     String result;
     String errormsg = "";
-    boolean up_success_flag = true;
     FeedBackGetterSetter feedBackGetterSetter;
     JourneyPlanGetterSetter journeyPlanGetterSetter;
 
@@ -162,7 +152,8 @@ public class UploadDataActivity extends Activity {
                 coverageBeanlist = database.getCoverageData(visit_date);
                 for (int i = 0; i < coverageBeanlist.size(); i++) {
                     journeyPlanGetterSetter = database.getStoreStatus(coverageBeanlist.get(i).getStoreId());
-                    if (!journeyPlanGetterSetter.getUploadStatus().get(0).equalsIgnoreCase(CommonString1.KEY_D)) {
+                    if (!journeyPlanGetterSetter.getUploadStatus().get(0).equalsIgnoreCase(CommonString1.KEY_U) &&
+                            !journeyPlanGetterSetter.getUploadStatus().get(0).equalsIgnoreCase(CommonString1.KEY_D)) {
                         String onXML = "[DATA][USER_DATA][STORE_CD]"
                                 + coverageBeanlist.get(i).getStoreId()
                                 + "[/STORE_CD]" + "[VISIT_DATE]"
@@ -214,7 +205,8 @@ public class UploadDataActivity extends Activity {
                             });
                         } else {
                             if (!result.toString().equalsIgnoreCase(CommonString1.KEY_SUCCESS)) {
-                                return CommonString1.METHOD_UPLOAD_DR_STORE_COVERAGE;
+                                continue;
+                                //return CommonString1.METHOD_UPLOAD_DR_STORE_COVERAGE;
                             }
 
                         }
@@ -225,12 +217,73 @@ public class UploadDataActivity extends Activity {
                         publishProgress(data);
                         String final_xml = "";
 
-///////window1 DATA
+           ///////window1 DATA ,checklist,stock window
                         final_xml = "";
                         onXML = "";
                         window1 = database.getwindowdat(coverageBeanlist.get(i).getStoreId());
                         if (window1.size() > 0) {
                             for (int j = 0; j < window1.size(); j++) {
+                                int key_id = window1.get(j).getKey_id();
+
+                                check1 = database.getchecklistByCommonid(key_id);
+                                String onXMLCHECKLIST = "", checklistfinal_xml = "";
+
+                                for (int j1 = 0; j1 < check1.size(); j1++) {
+                                    onXMLCHECKLIST = "[CHECK_LIST][MID]"
+                                            + mid
+                                            + "[/MID]"
+                                            + "[CREATED_BY]"
+                                            + username
+                                            + "[/CREATED_BY]"
+                                            + "[WINDOW_CD]"
+                                            + check1.get(j1).getWINDOW_CD()
+                                            + "[/WINDOW_CD]"
+                                            + "[CHECKLIST_CD]"
+                                            + check1.get(j1).getCHECKLIST_CD()
+                                            + "[/CHECKLIST_CD]"
+                                            + "[ANSWER_CD]"
+                                            + check1.get(j1).getANSWER_CD()
+                                            + "[/ANSWER_CD]"
+                                            + "[COMMON_ID]"
+                                            + key_id
+                                            + "[/COMMON_ID]"
+                                            + "[/CHECK_LIST]";
+
+                                    checklistfinal_xml = checklistfinal_xml + onXMLCHECKLIST;
+                                }
+                                final String checklist_xml = checklistfinal_xml;
+
+                                windowskuQuantityList = database.getWindowSkuQuantityInsertedDataByCommonid(key_id);
+                                String windowQuantityOnXML = "", windowQuantity_final_xml="";
+                                    for (int j2 = 0; j2 < windowskuQuantityList.size(); j2++) {
+                                        if (windowskuQuantityList.get(j2).getQwantity().equalsIgnoreCase("")) {
+                                            continue;
+                                        }
+                                        windowQuantityOnXML = "[WINDOW_STOCK][MID]"
+                                                + mid
+                                                + "[/MID]"
+                                                + "[CREATED_BY]"
+                                                + username
+                                                + "[/CREATED_BY]"
+                                                + "[BRAND_CD]"
+                                                + windowskuQuantityList.get(j2).getBrand_cd().get(0)
+                                                + "[/BRAND_CD]"
+                                                + "[SKU_CD]"
+                                                + windowskuQuantityList.get(j2).getSku_cd().get(0)
+                                                + "[/SKU_CD]"
+                                                + "[QUANTITY]"
+                                                + windowskuQuantityList.get(j2).getQwantity()
+                                                + "[/QUANTITY]"
+                                                + "[COMMON_ID]"
+                                                + key_id
+                                                + "[/COMMON_ID]"
+                                                + "[/WINDOW_STOCK]";
+
+                                        windowQuantity_final_xml = windowQuantity_final_xml + windowQuantityOnXML;
+
+                                    }
+                                    final String windowStock_xml = windowQuantity_final_xml;
+
 
                                 onXML = "[WINDOW_DATA][MID]"
                                         + mid
@@ -239,7 +292,7 @@ public class UploadDataActivity extends Activity {
                                         + username
                                         + "[/CREATED_BY]"
                                         + "[WINDOW_CD]"
-                                        + window1.get(j).getWindow_cd()
+                                        + window1.get(j).getWindow_cd().get(0)
                                         + "[/WINDOW_CD]"
                                         + "[REMARK]"
                                         + window1.get(j).getRemark()
@@ -248,16 +301,25 @@ public class UploadDataActivity extends Activity {
                                         + window1.get(j).getWindow_image()
                                         + "[/WINDOW_IMAGE]"
                                         + "[EXISTORNOT]"
-                                        + window1.get(j).getExistOrnot()
+                                        + window1.get(j).getExitOrNot().get(0)
                                         + "[/EXISTORNOT]"
+                                        + "[CHECKLIST]"
+                                        + checklist_xml
+                                        + "[/CHECKLIST]"
+                                        + "[WINDOW_STOCK]"
+                                        + windowStock_xml
+                                        + "[/WINDOW_STOCK]"
                                         + "[/WINDOW_DATA]";
 
                                 final_xml = final_xml + onXML;
+
                             }
+
+
                             final String sos_xml = "[DATA]" + final_xml + "[/DATA]";
                             request = new SoapObject(CommonString1.NAMESPACE, CommonString1.METHOD_UPLOAD_XML);
                             request.addProperty("XMLDATA", sos_xml);
-                            request.addProperty("KEYS", "GT_WINDOW_DATA");
+                            request.addProperty("KEYS", "GT_WINDOW_DATA_WITH_CHECKLIST_AND_STOCK");
                             request.addProperty("USERNAME", username);
                             request.addProperty("MID", mid);
                             envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
@@ -269,60 +331,151 @@ public class UploadDataActivity extends Activity {
                             result = (Object) envelope.getResponse();
 
                             if (!result.toString().equalsIgnoreCase(CommonString1.KEY_SUCCESS)) {
-                                return "WINDOW_DATA";
+                                continue;
+                                //return "GT_WINDOW_DATA_WITH_CHECKLIST_AND_STOCK";
                             }
                             data.value = 20;
-                            data.name = "WINDOW_DATA";
+                            data.name = "GT_WINDOW_DATA_WITH_CHECKLIST_AND_STOCK";
                             publishProgress(data);
                         }
 
-///////CheckList_DATA DATA
+
+                        // asset  data
+
                         final_xml = "";
                         onXML = "";
-                        check1 = database.getchecklist(coverageBeanlist.get(i).getStoreId());
+                        assetData = database.getassetdata(coverageBeanlist.get(i).getStoreId());
+                        if (assetData.size() > 0) {
+                            for (int j = 0; j < assetData.size(); j++) {
 
-                        if (check1.size() > 0) {
-                            for (int j = 0; j < check1.size(); j++) {
-                                onXML = "[CHECK_LIST][MID]"
+                                int key_id = assetData.get(j).getKey_id();
+                                assetStockData=   database.getAssetStockSavedDataByCommonid(key_id);
+                                String onXMLASSETSTOCK = "", assetfinal_xml = "";
+
+                                for (int j1 = 0; j1 < assetStockData.size(); j1++) {
+                                    onXMLASSETSTOCK = "[ASSET_STOCK][MID]"
+                                            + mid
+                                            + "[/MID]"
+                                            + "[CREATED_BY]"
+                                            + username
+                                            + "[/CREATED_BY]"
+                                            + "[SKU_CD]"
+                                            + assetStockData.get(j1).getSku_cd().get(0)
+                                            + "[/SKU_CD]"
+                                            + "[STOCK_QUANTITY]"
+                                            + assetStockData.get(j1).getSkuQuantity()
+                                            + "[/STOCK_QUANTITY]"
+                                            + "[BRAND_CD]"
+                                            + assetStockData.get(j1).getBrand_cd().get(0)
+                                            + "[/BRAND_CD]"
+                                            + "[COMMON_ID]"
+                                            + key_id
+                                            + "[/COMMON_ID]"
+                                            + "[/ASSET_STOCK]";
+
+                                    assetfinal_xml = assetfinal_xml + onXMLASSETSTOCK;
+                                }
+                                final String assetStock_xml = assetfinal_xml;
+
+
+                                onXML = "[ASSET_DATA][MID]"
                                         + mid
                                         + "[/MID]"
                                         + "[CREATED_BY]"
                                         + username
                                         + "[/CREATED_BY]"
-                                        + "[WINDOW_CD]"
-                                        + check1.get(j).getWINDOW_CD()
-                                        + "[/WINDOW_CD]"
-                                        + "[CHECKLIST_CD]"
-                                        + check1.get(j).getCHECKLIST_CD()
-                                        + "[/CHECKLIST_CD]"
-                                        + "[ANSWER_CD]"
-                                        + check1.get(j).getANSWER_CD()
-                                        + "[/ANSWER_CD]"
-                                        + "[/CHECK_LIST]";
+                                        + "[ASSET_IMG]"
+                                        + assetData.get(j).getAsset_image()
+                                        + "[/ASSET_IMG]"
+                                        + "[REMARK]"
+                                        + assetData.get(j).getRemark()
+                                        + "[/REMARK]"
+                                        + "[EXITORNOT]"
+                                        + assetData.get(j).getExitOrNot()
+                                        + "[/EXITORNOT]"
+                                        + "[ASSET_STOCK_DATA]"
+                                        + assetStock_xml
+                                        + "[/ASSET_STOCK_DATA]"
+                                        + "[/ASSET_DATA]";
+
                                 final_xml = final_xml + onXML;
+
                             }
-
                             final String sos_xml = "[DATA]" + final_xml + "[/DATA]";
-
                             request = new SoapObject(CommonString1.NAMESPACE, CommonString1.METHOD_UPLOAD_XML);
                             request.addProperty("XMLDATA", sos_xml);
-                            request.addProperty("KEYS", "GT_CHECK_LIST");
+                            request.addProperty("KEYS", "GT_ASSET_DATA_WITH_STOCK");
                             request.addProperty("USERNAME", username);
                             request.addProperty("MID", mid);
                             envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
                             envelope.dotNet = true;
                             envelope.setOutputSoapObject(request);
                             androidHttpTransport = new HttpTransportSE(CommonString1.URL);
-
                             androidHttpTransport.call(CommonString1.SOAP_ACTION + CommonString1.METHOD_UPLOAD_XML, envelope);
                             result = (Object) envelope.getResponse();
-
                             if (!result.toString().equalsIgnoreCase(CommonString1.KEY_SUCCESS)) {
-                                return "CHECK_LIST";
+                                continue;
+                                //return "GT_ASSET_DATA_WITH_STOCK";
                             }
-                            data.value = 30;
-                            data.name = "CHECK_LIST";
+                            data.value = 38;
+                            data.name = "GT_ASSET_DATA_WITH_STOCK";
                             publishProgress(data);
+
+                        }
+
+
+
+                        // Adddititional data
+
+                        final_xml = "";
+                        onXML = "";
+                        additional_visibility  = database.getAdditionalinsertedData(coverageBeanlist.get(i).getStoreId());
+                        if (additional_visibility.size() > 0) {
+
+                            for (int j = 0; j < additional_visibility.size(); j++) {
+                                onXML = "[ADDITIONAL_VISIBILITY][MID]"
+                                        + mid
+                                        + "[/MID]"
+                                        + "[CREATED_BY]"
+                                        + username
+                                        + "[/CREATED_BY]"
+                                        + "[CATEGORY_CD]"
+                                        + additional_visibility.get(j).getCategory_id().get(0)
+                                        + "[/CATEGORY_CD]"
+                                        + "[ADDITIONALV_IMG]"
+                                        + additional_visibility.get(j).getAdditional_image().get(0)
+                                        + "[/ADDITIONALV_IMG]"
+                                        + "[TOGGLE_VALUE]"
+                                        + additional_visibility.get(j).getToglvale().get(0)
+                                        + "[/TOGGLE_VALUE]"
+                                        + "[REMARK]"
+                                        + additional_visibility.get(j).getRemark()
+                                        + "[/REMARK]"
+                                        + "[/ADDITIONAL_VISIBILITY]";
+
+                                final_xml = final_xml + onXML;
+
+                            }
+                            final String sos_xml = "[DATA]" + final_xml + "[/DATA]";
+                            request = new SoapObject(CommonString1.NAMESPACE, CommonString1.METHOD_UPLOAD_XML);
+                            request.addProperty("XMLDATA", sos_xml);
+                            request.addProperty("KEYS", "GT_ADDITIONAL_VISIBILITY");
+                            request.addProperty("USERNAME", username);
+                            request.addProperty("MID", mid);
+                            envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
+                            envelope.dotNet = true;
+                            envelope.setOutputSoapObject(request);
+                            androidHttpTransport = new HttpTransportSE(CommonString1.URL);
+                            androidHttpTransport.call(CommonString1.SOAP_ACTION + CommonString1.METHOD_UPLOAD_XML, envelope);
+                            result = (Object) envelope.getResponse();
+                            if (!result.toString().equalsIgnoreCase(CommonString1.KEY_SUCCESS)) {
+                                continue;
+                                //return "GT_ADDITIONAL_VISIBILITY";
+                            }
+                            data.value = 38;
+                            data.name = "GT_ADDITIONAL_VISIBILITY";
+                            publishProgress(data);
+
                         }
 
 
@@ -364,7 +517,8 @@ public class UploadDataActivity extends Activity {
                             androidHttpTransport.call(CommonString1.SOAP_ACTION + CommonString1.METHOD_UPLOAD_XML, envelope);
                             result = (Object) envelope.getResponse();
                             if (!result.toString().equalsIgnoreCase(CommonString1.KEY_SUCCESS)) {
-                                return "STOCK_CATEGORY_DATA";
+                                continue;
+                               // return "STOCK_CATEGORY_DATA";
                             }
                             data.value = 38;
                             data.name = "STOCK_CATEGORY_DATA";
@@ -417,7 +571,8 @@ public class UploadDataActivity extends Activity {
                             androidHttpTransport.call(CommonString1.SOAP_ACTION + CommonString1.METHOD_UPLOAD_XML, envelope);
                             result = (Object) envelope.getResponse();
                             if (!result.toString().equalsIgnoreCase(CommonString1.KEY_SUCCESS)) {
-                                return "STOCK_DATA";
+                                continue;
+                               // return "STOCK_DATA";
                             }
                             data.value = 45;
                             data.name = "STOCK_DATA";
@@ -425,57 +580,6 @@ public class UploadDataActivity extends Activity {
 
                         }
 
-//							uploading SIGNAGE_DATA
-
-                        final_xml = "";
-                        onXML = "";
-                        SignAgeData = database.getSFTData(coverageBeanlist.get(i).getStoreId());
-
-                        if (SignAgeData.size() > 0) {
-
-                            for (int j = 0; j < SignAgeData.size(); j++) {
-
-                                onXML = "[SIGNAGE_DATA][MID]"
-                                        + mid
-                                        + "[/MID]"
-                                        + "[CREATED_BY]"
-                                        + username
-                                        + "[/CREATED_BY]"
-                                        + "[SIGN_EXIST]"
-                                        + SignAgeData.get(j).getExistSpinner_CD()
-                                        + "[/SIGN_EXIST]"
-                                        + "[WORKING]"
-                                        + SignAgeData.get(j).getWorkingsppiner_CD()
-                                        + "[/WORKING]"
-                                        + "[IMAGE_URL]"
-                                        + SignAgeData.get(j).getImage()
-                                        + "[/IMAGE_URL]"
-                                        + "[/SIGNAGE_DATA]";
-
-                                final_xml = final_xml + onXML;
-
-                            }
-                            final String sos_xml = "[DATA]" + final_xml + "[/DATA]";
-                            request = new SoapObject(CommonString1.NAMESPACE, CommonString1.METHOD_UPLOAD_XML);
-                            request.addProperty("XMLDATA", sos_xml);
-                            request.addProperty("KEYS", "GT_SIGNAGE_DATA");
-                            request.addProperty("USERNAME", username);
-                            request.addProperty("MID", mid);
-
-                            envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
-                            envelope.dotNet = true;
-                            envelope.setOutputSoapObject(request);
-                            androidHttpTransport = new HttpTransportSE(CommonString1.URL);
-                            androidHttpTransport.call(CommonString1.SOAP_ACTION + CommonString1.METHOD_UPLOAD_XML, envelope);
-                            result = (Object) envelope.getResponse();
-                            if (!result.toString().equalsIgnoreCase(CommonString1.KEY_SUCCESS)) {
-                                return "SIGNAGE_DATA";
-                            }
-                            data.value = 50;
-                            data.name = "SIGNAGE_DATA";
-                            publishProgress(data);
-
-                        }
 
 
 //							uploading POSM_DATA data
@@ -506,8 +610,7 @@ public class UploadDataActivity extends Activity {
 
                             }
 
-                            final String sos_xml = "[DATA]" + final_xml
-                                    + "[/DATA]";
+                            final String sos_xml = "[DATA]" + final_xml + "[/DATA]";
 
                             request = new SoapObject(CommonString1.NAMESPACE, CommonString1.METHOD_UPLOAD_XML);
                             request.addProperty("XMLDATA", sos_xml);
@@ -523,7 +626,8 @@ public class UploadDataActivity extends Activity {
                             result = (Object) envelope.getResponse();
 
                             if (!result.toString().equalsIgnoreCase(CommonString1.KEY_SUCCESS)) {
-                                return "POSM_DATA";
+                                continue;
+                               // return "POSM_DATA";
                             }
 
                             data.value = 60;
@@ -531,6 +635,7 @@ public class UploadDataActivity extends Activity {
                             publishProgress(data);
 
                         }
+
 
 ///////FEEDBACK_DATA DATA
                         final_xml = "";
@@ -571,7 +676,8 @@ public class UploadDataActivity extends Activity {
                                 androidHttpTransport.call(CommonString1.SOAP_ACTION + CommonString1.METHOD_UPLOAD_XML, envelope);
                                 result = (Object) envelope.getResponse();
                                 if (!result.toString().equalsIgnoreCase(CommonString1.KEY_SUCCESS)) {
-                                    return "FEEDBACK_DATA";
+                                    continue;
+                                   // return "FEEDBACK_DATA";
                                 }
 
                                 data.value = 70;
@@ -581,132 +687,6 @@ public class UploadDataActivity extends Activity {
                             }
                         }
 
-//////////////////////////////////////
-
-                    /*    if (coverageBeanlist.get(i).getImage() != null && !coverageBeanlist.get(i).getImage().equals("")) {
-                            if (new File(CommonString1.FILE_PATH + coverageBeanlist.get(i).getImage()).exists()) {
-                                result = UploadImage(coverageBeanlist.get(i).getImage(), "GTStoreImages");
-                                if (!result.toString().equalsIgnoreCase(CommonString1.KEY_SUCCESS)) {
-                                    return "GTStoreImages";
-                                } else if (result.toString().equalsIgnoreCase(CommonString1.KEY_FALSE)) {
-                                    return "GTStoreImages";
-                                } else if (result.toString().equalsIgnoreCase(CommonString1.KEY_FAILURE)) {
-                                    return "GTStoreImages" + "," + errormsg;
-                                }
-                                runOnUiThread(new Runnable() {
-
-                                    public void run() {
-                                        message.setText("GT Store Image Uploaded");
-                                    }
-                                });
-
-                            }
-                            data.value = 60;
-                            data.name = "GTStoreImages";
-                            publishProgress(data);
-                        }
-
-
-//////////////////////////
-                        if (POSMdata.size() > 0) {
-
-                            for (int j = 0; j < POSMdata.size(); j++) {
-
-                                if (POSMdata.get(j).getImage_Url() != null && !POSMdata.get(j).getImage_Url().equals("")) {
-
-                                    if (new File(CommonString1.FILE_PATH + POSMdata.get(j).getImage_Url()).exists()) {
-
-                                        result = UploadImage(POSMdata.get(j).getImage_Url(), "GTPosmImages");
-
-
-                                        if (!result.toString().equalsIgnoreCase(CommonString1.KEY_SUCCESS)) {
-                                            return "GTPosmImages";
-                                        } else if (result.toString().equalsIgnoreCase(CommonString1.KEY_FALSE)) {
-                                            return "GTPosmImages";
-                                        } else if (result.toString().equalsIgnoreCase(CommonString1.KEY_FAILURE)) {
-                                            return "GTPosmImages" + "," + errormsg;
-                                        }
-                                        runOnUiThread(new Runnable() {
-
-                                            public void run() {
-                                                message.setText("GTPosmImages Uploaded");
-                                            }
-                                        });
-
-                                    }
-                                }
-                            }
-                            data.value = 80;
-                            data.name = "GTPosmImages";
-                            publishProgress(data);
-                        }
-
-
-                        ///////////////
-                        if (window1.size() > 0) {
-                            for (int j = 0; j < window1.size(); j++) {
-                                if (window1.get(j).getWindow_image() != null && !window1.get(j).getWindow_image().equals("")) {
-
-                                    if (new File(CommonString1.FILE_PATH + window1.get(j).getWindow_image()).exists()) {
-
-                                        result = UploadImage(window1.get(j).getWindow_image(), "GTWindowImages");
-
-
-                                        if (!result.toString().equalsIgnoreCase(CommonString1.KEY_SUCCESS)) {
-                                            return "GTWindowImages";
-                                        } else if (result.toString().equalsIgnoreCase(CommonString1.KEY_FALSE)) {
-                                            return "GTWindowImages";
-                                        } else if (result.toString().equalsIgnoreCase(CommonString1.KEY_FAILURE)) {
-
-                                            return "GTWindowImages" + "," + errormsg;
-                                        }
-
-                                        runOnUiThread(new Runnable() {
-
-                                            public void run() {
-
-                                                message.setText("GTWindowImages Uploaded");
-                                            }
-                                        });
-
-                                    }
-                                }
-                            }
-                            data.value = 95;
-                            data.name = "GTWindowImages";
-                            publishProgress(data);
-                        }
-
-
-                        if (stockCategoryImageData.size() > 0) {
-                            for (int j = 0; j < stockCategoryImageData.size(); j++) {
-                                if (stockCategoryImageData.get(j).getCategory_image() != null && !stockCategoryImageData.get(j).getCategory_image().equals("")) {
-                                    if (new File(CommonString1.FILE_PATH + stockCategoryImageData.get(j).getCategory_image()).exists()) {
-                                        result = UploadImage(stockCategoryImageData.get(j).getCategory_image(), "GTStockImages");
-                                        if (!result.toString().equalsIgnoreCase(CommonString1.KEY_SUCCESS)) {
-                                            return "GTStockImages";
-                                        } else if (result.toString().equalsIgnoreCase(CommonString1.KEY_FALSE)) {
-                                            return "GTStockImages";
-                                        } else if (result.toString().equalsIgnoreCase(CommonString1.KEY_FAILURE)) {
-
-                                            return "GTStockImages" + "," + errormsg;
-                                        }
-
-                                        runOnUiThread(new Runnable() {
-
-                                            public void run() {
-
-                                                message.setText("GTStockImages Uploaded");
-                                            }
-                                        });
-
-                                    }
-                                }
-                            }
-                            data.value = 98;
-                            data.name = "GTStockImages";
-                            publishProgress(data);
-                        }*/
 
 
                         // SET COVERAGE STATUS
@@ -739,23 +719,19 @@ public class UploadDataActivity extends Activity {
                         androidHttpTransport1.call(CommonString1.SOAP_ACTION + CommonString1.MEHTOD_UPLOAD_COVERAGE_STATUS, envelope1);
                         Object result1 = (Object) envelope1.getResponse();
                         if (result1.toString().equalsIgnoreCase(CommonString1.KEY_SUCCESS)) {
-
                             database.open();
                             database.updateCoverageStatus(coverageBeanlist.get(i).getMID(), CommonString1.KEY_D);
-                            database.updateStoreStatusOnLeave(coverageBeanlist.get(i).getStoreId(),
-                                    coverageBeanlist.get(i).getVisitDate(), CommonString1.KEY_D);
+                            database.updateStoreStatusOnLeave(coverageBeanlist.get(i).getStoreId(), coverageBeanlist.get(i).getVisitDate(), CommonString1.KEY_D);
                         }
                         if (!result1.toString().equalsIgnoreCase(CommonString1.KEY_SUCCESS)) {
-                            return "COVERAGE_STATUS";
+                            continue;
+                            //return "COVERAGE_STATUS";
                         }
 
                         data.value = 75;
                         data.name = "COVERAGE_STATUS";
                         publishProgress(data);
-
-
                     }
-
                 }
 
                 File dir = new File(CommonString1.FILE_PATH);
@@ -832,16 +808,40 @@ public class UploadDataActivity extends Activity {
                             data.name = "GTGeoTagImages";
                             publishProgress(data);
                         }
+
+                        if (list.get(i1).contains("_ADDITIONALIMG_")) {
+                            File originalFile = new File(Path + list.get(i1));
+                            result = RetrofitClass.UploadImageByRetrofit(UploadDataActivity.this,
+                                    originalFile.getName(), "GTAdditionalVisibilityImages");
+                            if (!result.toString().equalsIgnoreCase(CommonString1.KEY_SUCCESS)) {
+                                return result.toString();
+                            }
+                            data.value = 80;
+                            data.name = "_ADDITIONALIMG_";
+                            publishProgress(data);
+                        }
+
+                        if (list.get(i1).contains("_ASSETIMG_")) {
+                            File originalFile = new File(Path + list.get(i1));
+                            result = RetrofitClass.UploadImageByRetrofit(UploadDataActivity.this,
+                                    originalFile.getName(), "GTAssetImages");
+                            if (!result.toString().equalsIgnoreCase(CommonString1.KEY_SUCCESS)) {
+                                return result.toString();
+                            }
+                            data.value = 80;
+                            data.name = "_ASSETIMG_";
+                            publishProgress(data);
+                        }
+
                     }
                     String response = updateStatus();
                     if (!response.equalsIgnoreCase(CommonString1.KEY_SUCCESS)) {
                         return CommonString1.KEY_FAILURE;
-                    }
-                    else {
+                    } else {
                         return CommonString1.KEY_SUCCESS;
                     }
 
-                }  else {
+                } else {
                     String response = updateStatus();
                     if (response.equalsIgnoreCase(CommonString1.KEY_SUCCESS)) {
                         return CommonString1.KEY_SUCCESS;
@@ -897,7 +897,7 @@ public class UploadDataActivity extends Activity {
             if (result.contains(CommonString1.KEY_SUCCESS)) {
                 AlertMessage message = new AlertMessage(UploadDataActivity.this, AlertMessage.MESSAGE_UPLOAD_DATA, "success", null);
                 message.showMessage();
-                database.deleteAllTables();
+              //  database.deleteAllTables();
             } else if (!result.equals("")) {
                 AlertMessage message = new AlertMessage(UploadDataActivity.this, "Error in uploading :" + result, "success", null);
                 message.showMessage();
@@ -1010,6 +1010,7 @@ public class UploadDataActivity extends Activity {
         }
         return arrayFiles;
     }
+
     private String updateStatus() throws IOException, XmlPullParserException {
         String final_xml = "";
         String onXML = "";
@@ -1017,7 +1018,8 @@ public class UploadDataActivity extends Activity {
         try {
             coverageBeanlist = database.getCoverageData(visit_date);
             for (int i = 0; i < coverageBeanlist.size(); i++) {
-                if (!coverageBeanlist.get(i).getStatus().equalsIgnoreCase(CommonString1.KEY_U)) {
+                journeyPlanGetterSetter = database.getStoreStatus(coverageBeanlist.get(i).getStoreId());
+                if (journeyPlanGetterSetter.getUploadStatus().get(0).equalsIgnoreCase(CommonString1.KEY_D)) {
                     onXML = "[COVERAGE_STATUS][STORE_ID]"
                             + coverageBeanlist.get(i).getStoreId()
                             + "[/STORE_ID]"

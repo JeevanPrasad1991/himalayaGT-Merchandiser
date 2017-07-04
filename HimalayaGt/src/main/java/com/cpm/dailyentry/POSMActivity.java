@@ -1,10 +1,13 @@
 package com.cpm.dailyentry;
 
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -19,6 +22,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
@@ -92,9 +97,9 @@ public class POSMActivity extends AppCompatActivity implements OnClickListener, 
     String str1;
     EditText Editpro;
     ListView list2;
-    ImageView imagebutton;
+    ImageView imagebutton,img_addit;
 
-    private Button savebtn, addbtn;
+    private Button savebtn,  addbtn, cancel_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -123,7 +128,7 @@ public class POSMActivity extends AppCompatActivity implements OnClickListener, 
         addbtn = (Button) findViewById(R.id.btn_Add);
         list2 = (ListView) findViewById(R.id.listView1);
         datalist = db.getPOSMDATA(store_cd);
-        a1 = "Select POB";
+        a1 = "Select Visibility Elements";
         spinnerdatalist.add(a1);
         for (int i = 0; i < datalist.size(); i++) {
             spinnerdatalist.add(datalist.get(i).getPOSM().get(0));
@@ -167,9 +172,8 @@ public class POSMActivity extends AppCompatActivity implements OnClickListener, 
                                             secPlaceData.add(secdata);
                                             getMid();
                                             //db.deletePromotionData(store_cd);
-                                            db.insertPOSM(store_cd, secPlaceData, list, img1);
+                                            db.insertPOSM(store_cd, secPlaceData);
                                             Snackbar.make(addbtn, "Data has been saved", Snackbar.LENGTH_SHORT).show();
-
 
                                             Editpro.setText("");
                                             Editpro.setHint("");
@@ -463,7 +467,7 @@ public class POSMActivity extends AppCompatActivity implements OnClickListener, 
                 LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 convertView = inflater.inflate(R.layout.secondaryplac_mt_adapter, null);
                 holder.POSMName = (TextView) convertView.findViewById(R.id.txt_category);
-                holder.ImageURL = (TextView) convertView.findViewById(R.id.txt_quantity);
+                holder.ImageURL = (ImageView) convertView.findViewById(R.id.txt_quantity);
                 holder.Editno = (TextView) convertView.findViewById(R.id.txt_remark);
                 holder.delRow = (ImageView) convertView.findViewById(R.id.imgDelRow);
                 convertView.setTag(holder);
@@ -473,7 +477,9 @@ public class POSMActivity extends AppCompatActivity implements OnClickListener, 
             }
 
             holder.POSMName.setText(secPlaceData.get(position).getPOSM().get(0));
-            holder.ImageURL.setText(secPlaceData.get(position).getImage_Url());
+            final Bitmap bmp = BitmapFactory.decodeFile(str + secPlaceData.get(position).getImage_Url());
+            holder.ImageURL.setImageBitmap(bmp);
+
             holder.Editno.setText(secPlaceData.get(position).getEdText());
             holder.delRow.setOnClickListener(new OnClickListener() {
 
@@ -524,6 +530,30 @@ public class POSMActivity extends AppCompatActivity implements OnClickListener, 
                 }
             });
 
+            holder.ImageURL.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    final Dialog dialog = new Dialog(POSMActivity.this);
+                    //setting custom layout---------------------------- to dialog
+                    dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                    dialog.setContentView(R.layout.custom_dialog_new_posm);
+                    dialog.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
+                    cancel_btn = (Button) dialog.findViewById(R.id.cancel_btn1);
+                    img_addit = (ImageView) dialog.findViewById(R.id.img_addit1);
+                    img_addit.setImageBitmap(bmp);
+                    db = new GSKDatabase(POSMActivity.this);
+                    db.open();
+                    cancel_btn.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            dialog.dismiss();
+                        }
+                    });
+
+                    dialog.show();
+                }
+            });
+
             holder.POSMName.setId(position);
             //holder.brandname.setId(position);
             holder.ImageURL.setId(position);
@@ -535,8 +565,8 @@ public class POSMActivity extends AppCompatActivity implements OnClickListener, 
 
         private class ViewHolder {
 
-            TextView POSMName, brandname, ImageURL, Editno;
-            ImageView delRow;
+            TextView POSMName, Editno;
+            ImageView delRow,ImageURL;
 
 
         }
@@ -548,8 +578,8 @@ public class POSMActivity extends AppCompatActivity implements OnClickListener, 
     boolean validation() {
         boolean flag = true;
         String name = spinner.getSelectedItem().toString();
-        if (name.equalsIgnoreCase("Select POB")) {
-            Error_Message = "Please select POSM Name from dropdown list";
+        if (name.equalsIgnoreCase("Select Visibility Elements")) {
+            Error_Message = "Please select Visibility Elements Name from dropdown list";
             flag = false;
         } else if (img1.equals("")) {
             imagebutton.setBackgroundResource(R.drawable.cam_icon);

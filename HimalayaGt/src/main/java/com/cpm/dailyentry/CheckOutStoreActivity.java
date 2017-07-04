@@ -114,7 +114,6 @@ public class CheckOutStoreActivity extends Activity {
                     data.value = 20;
                     data.name = "Checked out Data Uploading";
                     publishProgress(data);
-
                     String onXML = "[STORE_CHECK_OUT_STATUS][USER_ID]"
                             + username
                             + "[/USER_ID]" + "[STORE_ID]"

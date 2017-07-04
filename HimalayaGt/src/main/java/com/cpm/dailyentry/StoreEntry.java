@@ -27,6 +27,8 @@ import com.cpm.GetterSetter.NavMenuItemGetterSetter;
 import com.cpm.database.GSKDatabase;
 import com.cpm.capitalfoods.R;
 import com.cpm.geotag.LocationActivity;
+import com.cpm.xmlGetterSetter.AssetMappingGetterSetter;
+import com.cpm.xmlGetterSetter.AssetMasterNewGetterSetter;
 import com.cpm.xmlGetterSetter.CategoryMasterGetterSetter;
 import com.cpm.xmlGetterSetter.StockGetterSetter;
 import com.cpm.xmlGetterSetter.WindowListGetterSetter;
@@ -43,9 +45,10 @@ public class StoreEntry extends AppCompatActivity implements OnClickListener {
     ValueAdapter adapter;
     RecyclerView recyclerView;
     private ArrayList<WindowListGetterSetter> windowdata = new ArrayList<WindowListGetterSetter>();
-    List<WindowSKUEntryGetterSetter> WINDOWSIZE = new ArrayList<WindowSKUEntryGetterSetter>();
+    List<WindowListGetterSetter> WINDOWSIZE = new ArrayList<>();
+    ArrayList<AssetMappingGetterSetter> listassetMasterData = new ArrayList<>();
     ArrayList<CategoryMasterGetterSetter> categorymaster_list = new ArrayList<>();
-    boolean stock_flag = false, kpi_flag = false, geoTag_flag = false, poasm_flage = false;
+    boolean stock_flag = false, kpi_flag = false, geoTag_flag = false, poasm_flage = false, asset_flag = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,6 +81,7 @@ public class StoreEntry extends AppCompatActivity implements OnClickListener {
         super.onResume();
         windowdata = db.getWindowListData(state_cd, store_type_cd);
         WINDOWSIZE = db.getwindowdat(store_cd);
+        listassetMasterData = db.getassetCategoryData(store_cd);
         recyclerView = (RecyclerView) findViewById(R.id.drawer_layout_recycle);
         adapter = new ValueAdapter(getApplicationContext(), getdata());
         recyclerView.setAdapter(adapter);
@@ -288,7 +292,7 @@ public class StoreEntry extends AppCompatActivity implements OnClickListener {
                     }
 
                     //Asset activity
-                    if (current.getIconImg() == R.drawable.calls_img || current.getIconImg() == R.drawable.calls_done) {
+                    if (current.getIconImg() == R.drawable.asset_new || current.getIconImg() == R.drawable.asset_new_done) {
                         Intent in4 = new Intent(getApplicationContext(), AssetNewActivity.class);
                         startActivity(in4);
                         overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
@@ -311,7 +315,7 @@ public class StoreEntry extends AppCompatActivity implements OnClickListener {
                     }
 
                     //AdditionalVisibility  activity
-                    if (current.getIconImg() == R.drawable.stock || current.getIconImg() == R.drawable.stockdone) {
+                    if (current.getIconImg() == R.drawable.additional_visibility || current.getIconImg() == R.drawable.additional_visibility_done) {
                         Intent in5 = new Intent(getApplicationContext(), AdditionalVisibilityActivity.class);
                         startActivity(in5);
                         overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
@@ -378,6 +382,19 @@ public class StoreEntry extends AppCompatActivity implements OnClickListener {
                 break;
             }
         }
+
+//Asset cagegory
+        if (listassetMasterData.size() > 0) {
+            for (int k = 0; k < listassetMasterData.size(); k++) {
+                asset_flag = db.isOpeningDataFilledAsset(store_cd, listassetMasterData.get(k).getAsset_cd().get(0));
+                if (!asset_flag) {
+                    alldata_flag = false;
+                    break;
+                }
+            }
+        }
+
+
         if (!GEO_TAG.equalsIgnoreCase(CommonString1.KEY_GEO_Y)) {
             if (db.getGeotaggingData(store_cd).size() == 0) {
                 alldata_flag = false;
@@ -393,7 +410,7 @@ public class StoreEntry extends AppCompatActivity implements OnClickListener {
 
     public List<NavMenuItemGetterSetter> getdata() {
         List<NavMenuItemGetterSetter> data = new ArrayList<>();
-        int windows = 0, posmImg, Stock = 0, additionalvisibility, competitionImg, middayImg, assetImg, geotag = 0, feedback = 0;
+        int windows = 0, posmImg, Stock = 0, additionalvisibility, assetImg = 0, geotag = 0, feedback = 0;
         if (windowdata.size() > 0) {
             for (int k = 0; k < windowdata.size(); k++) {
                 kpi_flag = db.isOpeningDataFilledKpi(store_cd, windowdata.get(k).getWindow_cd().get(0));
@@ -402,33 +419,33 @@ public class StoreEntry extends AppCompatActivity implements OnClickListener {
                     break;
                 } else {
                     kpi_flag = true;
-                    windows = R.drawable.windows;
+                    windows = R.drawable.window_done;
                 }
             }
         }
 
 //Asset cagegory
-       /* if (windowdata.size() > 0) {
-            for (int k = 0; k < windowdata.size(); k++) {
-                kpi_flag = db.isOpeningDataFilledKpi(store_cd, windowdata.get(k).getWindow_cd().get(0));
-                *///if (kpi_flag == false) {
-        assetImg = R.drawable.calls_img;
-        //  break;
-        // } else {
-        //  kpi_flag = true;
-        //  assetImg = R.drawable.calls_done;
-        // }
-        // }
-        //  }
+        if (listassetMasterData.size() > 0) {
+            for (int k = 0; k < listassetMasterData.size(); k++) {
+                asset_flag = db.isOpeningDataFilledAsset(store_cd, listassetMasterData.get(k).getAsset_cd().get(0));
+                if (!asset_flag) {
+                    assetImg = R.drawable.asset_new;
+                    break;
+                } else {
+                    asset_flag = true;
+                    assetImg = R.drawable.asset_new_done;
+                }
+            }
+        }
 
 
         // Store additional visibility
         if (db.isAdditionalVisibilityDataFilled(store_cd)) {
-            additionalvisibility = R.drawable.stockdone;
-
+            additionalvisibility = R.drawable.additional_visibility_done;
         } else {
-            additionalvisibility = R.drawable.stock;
+            additionalvisibility = R.drawable.additional_visibility;
         }
+
         //  posm data image
         if (db.isPOSMDataFilled(store_cd)) {
             poasm_flage = true;
@@ -448,13 +465,6 @@ public class StoreEntry extends AppCompatActivity implements OnClickListener {
                 Stock = R.drawable.stock_done1;
             }
         }
-
-    /* // Store sign Age
-        if (db.getSFTData(store_cd).size() > 0) {
-            additionalImg = R.drawable.storesignage_done1;
-        } else {
-            additionalImg = R.drawable.storesignage1;
-        }*/
 
         if (db.getGeotaggingData(store_cd).size() > 0) {
             if (db.getGeotaggingData(store_cd).get(0).getGEO_TAG().equalsIgnoreCase(CommonString1.KEY_GEO_Y)) {
@@ -501,7 +511,6 @@ public class StoreEntry extends AppCompatActivity implements OnClickListener {
             }
         } else if (user_type.equals("Merchandiser")) {
             int img[] = {windows, posmImg, Stock, geotag, feedback, additionalvisibility, assetImg};
-            // int img[] = {windows, Stock, geotag,additionalImg};
             for (int i = 0; i < img.length; i++) {
                 NavMenuItemGetterSetter recData = new NavMenuItemGetterSetter();
                 recData.setIconImg(img[i]);

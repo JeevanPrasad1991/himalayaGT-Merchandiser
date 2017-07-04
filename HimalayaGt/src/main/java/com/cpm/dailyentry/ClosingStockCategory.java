@@ -29,6 +29,7 @@ import com.cpm.Constants.CommonString1;
 import com.cpm.capitalfoods.R;
 import com.cpm.database.GSKDatabase;
 import com.cpm.geotag.LocationActivity;
+import com.cpm.xmlGetterSetter.AssetMappingGetterSetter;
 import com.cpm.xmlGetterSetter.CategoryMasterGetterSetter;
 import com.cpm.xmlGetterSetter.StockNewGetterSetter;
 
@@ -50,6 +51,7 @@ public class ClosingStockCategory extends AppCompatActivity implements AdapterVi
     String STATE_CD, STORE_TYPE_CD;
     boolean stock_falg = false;
     StockNewGetterSetter stock_list=new StockNewGetterSetter();
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

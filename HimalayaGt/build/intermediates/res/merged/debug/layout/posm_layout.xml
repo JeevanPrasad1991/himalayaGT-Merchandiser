@@ -88,7 +88,7 @@
                     android:textColor="@color/colorPrimary"
                     android:textSize="17sp"
                     android:gravity="center_vertical"
-                    android:text="POB Name  "
+                    android:text="Visibility Ele Name"
 
                     />
 
@@ -244,7 +244,7 @@
                     android:textColor="#ffffff"
                     android:layout_marginLeft="3sp"
                     android:layout_weight="4"
-                    android:text="POB Name"
+                    android:text="Visibility Ele Name"
                     android:gravity="center"
                     android:textSize="14sp" />
 
@@ -258,7 +258,7 @@
                     android:background="@color/colorPrimary"
                     android:textColor="#ffffff"
                     android:gravity="center"
-                    android:text="ImageUrl"
+                    android:text="Images"
                     android:textSize="14sp" />
 
                 <TextView
