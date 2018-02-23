@@ -64,7 +64,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/sku_icon"
             fab:fab_size="mini"
-            fab:fab_label="Sku"/>
+            fab:fab_label="Stock"/>
         <com.github.clans.fab.FloatingActionButton
             android:id="@+id/fab"
             android:layout_width="wrap_content"

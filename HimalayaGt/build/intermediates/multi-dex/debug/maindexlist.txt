@@ -300,7 +300,6 @@ com/cpm/dailyentry/POSMActivity$4.class
 com/google/android/gms/maps/CameraUpdateFactory.class
 android/support/annotation/RequiresPermission.class
 com/cpm/autoupdate/AutoupdateActivity$1.class
-com/cpm/dailyentry/SubAssetCategoryActivity$5.class
 android/support/design/widget/HeaderBehavior.class
 com/cpm/dailyentry/AssetNewActivity.class
 android/support/v4/widget/MaterialProgressDrawable$Ring.class

@@ -4,7 +4,6 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.StringReader;
-import java.net.MalformedURLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -43,24 +42,17 @@ import com.cpm.delegates.CoverageBean;
 import com.cpm.message.AlertMessage;
 
 import com.cpm.retrofit.RetrofitClass;
-import com.cpm.xmlGetterSetter.AssetInsertdataGetterSetter;
-import com.cpm.xmlGetterSetter.COMPETITORGetterSetter;
-import com.cpm.xmlGetterSetter.CallsGetterSetter;
+import com.cpm.xmlGetterSetter.AssetMappingGetterSetter;
+import com.cpm.xmlGetterSetter.BrandGetterSetter;
 import com.cpm.xmlGetterSetter.ChecklistGetterSetter;
-import com.cpm.xmlGetterSetter.CompetitionPromotionGetterSetter;
-import com.cpm.xmlGetterSetter.DeepFreezerTypeGetterSetter;
-import com.cpm.xmlGetterSetter.FacingCompetitorGetterSetter;
 import com.cpm.xmlGetterSetter.FailureGetterSetter;
 import com.cpm.xmlGetterSetter.FeedBackGetterSetter;
-import com.cpm.xmlGetterSetter.FoodStoreInsertDataGetterSetter;
 import com.cpm.xmlGetterSetter.JourneyPlanGetterSetter;
-import com.cpm.xmlGetterSetter.MappingAssetGetterSetter;
 import com.cpm.xmlGetterSetter.POSMDATAGetterSetter;
+import com.cpm.xmlGetterSetter.SkuQwantityGetterSetter;
 import com.cpm.xmlGetterSetter.StoreSignAgeGetterSetter;
-import com.cpm.xmlGetterSetter.PromotionInsertDataGetterSetter;
 import com.cpm.xmlGetterSetter.StockNewGetterSetter;
-import com.cpm.xmlGetterSetter.WindowSKUEntryGetterSetter;
-import com.cpm.xmlGetterSetter.windowsChildData;
+import com.cpm.xmlGetterSetter.WindowListGetterSetter;
 import com.cpm.xmlHandler.FailureXMLHandler;
 
 public class CheckoutNUpload extends Activity {
@@ -83,14 +75,18 @@ public class CheckoutNUpload extends Activity {
     String errormsg = "";
     String Path;
     private FailureGetterSetter failureGetterSetter = null;
-    private ArrayList<StockNewGetterSetter> stockData = new ArrayList<StockNewGetterSetter>();
     private ArrayList<StoreSignAgeGetterSetter> SignAgeData = new ArrayList<StoreSignAgeGetterSetter>();
     private ArrayList<POSMDATAGetterSetter> POSMdata = new ArrayList<POSMDATAGetterSetter>();
-    private ArrayList<WindowSKUEntryGetterSetter> window1 = new ArrayList<WindowSKUEntryGetterSetter>();
+    private ArrayList<WindowListGetterSetter> window1 = new ArrayList<WindowListGetterSetter>();
     private ArrayList<ChecklistGetterSetter> check1 = new ArrayList<ChecklistGetterSetter>();
     FeedBackGetterSetter feedBackGetterSetter;
     JourneyPlanGetterSetter journeyPlanGetterSetter;
+    private ArrayList<StockNewGetterSetter> stockData = new ArrayList<StockNewGetterSetter>();
     private ArrayList<StockNewGetterSetter> stockCategoryImageData = new ArrayList<StockNewGetterSetter>();
+    private ArrayList<SkuQwantityGetterSetter> windowskuQuantityList = new ArrayList<SkuQwantityGetterSetter>();
+    private ArrayList<AssetMappingGetterSetter> assetData = new ArrayList<>();
+    ArrayList<BrandGetterSetter> assetStockData = new ArrayList<>();
+    private ArrayList<AssetMappingGetterSetter> additional_visibility = new ArrayList<AssetMappingGetterSetter>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -396,7 +392,8 @@ public class CheckoutNUpload extends Activity {
                             });
                         } else {
                             if (!result.toString().equalsIgnoreCase(CommonString1.KEY_SUCCESS)) {
-                                return CommonString1.METHOD_UPLOAD_DR_STORE_COVERAGE;
+                                continue;
+                               // return CommonString1.METHOD_UPLOAD_DR_STORE_COVERAGE;
                             }
 
                         }
@@ -407,12 +404,73 @@ public class CheckoutNUpload extends Activity {
                         publishProgress(data);
                         String final_xml = "";
 
-///////window1 DATA
+                        ///////window1 DATA ,checklist,stock window
                         final_xml = "";
                         onXML = "";
                         window1 = database.getwindowdat(coverageBeanlist.get(i).getStoreId());
                         if (window1.size() > 0) {
                             for (int j = 0; j < window1.size(); j++) {
+                                int key_id = window1.get(j).getKey_id();
+
+                                check1 = database.getchecklistByCommonid(key_id);
+                                String onXMLCHECKLIST = "", checklistfinal_xml = "";
+
+                                for (int j1 = 0; j1 < check1.size(); j1++) {
+                                    onXMLCHECKLIST = "[CHECK_LIST][MID]"
+                                            + mid
+                                            + "[/MID]"
+                                            + "[CREATED_BY]"
+                                            + username
+                                            + "[/CREATED_BY]"
+                                            + "[WINDOW_CD]"
+                                            + check1.get(j1).getWINDOW_CD()
+                                            + "[/WINDOW_CD]"
+                                            + "[CHECKLIST_CD]"
+                                            + check1.get(j1).getCHECKLIST_CD()
+                                            + "[/CHECKLIST_CD]"
+                                            + "[ANSWER_CD]"
+                                            + check1.get(j1).getANSWER_CD()
+                                            + "[/ANSWER_CD]"
+                                            + "[COMMON_ID]"
+                                            + key_id
+                                            + "[/COMMON_ID]"
+                                            + "[/CHECK_LIST]";
+
+                                    checklistfinal_xml = checklistfinal_xml + onXMLCHECKLIST;
+                                }
+                                final String checklist_xml = checklistfinal_xml;
+
+                                windowskuQuantityList = database.getWindowSkuQuantityInsertedDataByCommonid(key_id);
+                                String windowQuantityOnXML = "", windowQuantity_final_xml="";
+                                for (int j2 = 0; j2 < windowskuQuantityList.size(); j2++) {
+                                    if (windowskuQuantityList.get(j2).getQwantity().equalsIgnoreCase("")) {
+                                        continue;
+                                    }
+                                    windowQuantityOnXML = "[WINDOW_STOCK][MID]"
+                                            + mid
+                                            + "[/MID]"
+                                            + "[CREATED_BY]"
+                                            + username
+                                            + "[/CREATED_BY]"
+                                            + "[BRAND_CD]"
+                                            + windowskuQuantityList.get(j2).getBrand_cd().get(0)
+                                            + "[/BRAND_CD]"
+                                            + "[SKU_CD]"
+                                            + windowskuQuantityList.get(j2).getSku_cd().get(0)
+                                            + "[/SKU_CD]"
+                                            + "[QUANTITY]"
+                                            + windowskuQuantityList.get(j2).getQwantity()
+                                            + "[/QUANTITY]"
+                                            + "[COMMON_ID]"
+                                            + key_id
+                                            + "[/COMMON_ID]"
+                                            + "[/WINDOW_STOCK]";
+
+                                    windowQuantity_final_xml = windowQuantity_final_xml + windowQuantityOnXML;
+
+                                }
+                                final String windowStock_xml = windowQuantity_final_xml;
+
 
                                 onXML = "[WINDOW_DATA][MID]"
                                         + mid
@@ -421,7 +479,7 @@ public class CheckoutNUpload extends Activity {
                                         + username
                                         + "[/CREATED_BY]"
                                         + "[WINDOW_CD]"
-                                        + window1.get(j).getWindow_cd()
+                                        + window1.get(j).getWindow_cd().get(0)
                                         + "[/WINDOW_CD]"
                                         + "[REMARK]"
                                         + window1.get(j).getRemark()
@@ -430,82 +488,183 @@ public class CheckoutNUpload extends Activity {
                                         + window1.get(j).getWindow_image()
                                         + "[/WINDOW_IMAGE]"
                                         + "[EXISTORNOT]"
-                                        + window1.get(j).getExistOrnot()
+                                        + window1.get(j).getExitOrNot().get(0)
                                         + "[/EXISTORNOT]"
+                                        + "[CHECKLIST]"
+                                        + checklist_xml
+                                        + "[/CHECKLIST]"
+                                        + "[WINDOW_STOCK]"
+                                        + windowStock_xml
+                                        + "[/WINDOW_STOCK]"
                                         + "[/WINDOW_DATA]";
 
+
                                 final_xml = final_xml + onXML;
+
                             }
+
+
                             final String sos_xml = "[DATA]" + final_xml + "[/DATA]";
                             request = new SoapObject(CommonString1.NAMESPACE, CommonString1.METHOD_UPLOAD_XML);
                             request.addProperty("XMLDATA", sos_xml);
-                            request.addProperty("KEYS", "GT_WINDOW_DATA");
+                            request.addProperty("KEYS", "GT_WINDOW_DATA_WITH_CHECKLIST_AND_STOCK");
                             request.addProperty("USERNAME", username);
                             request.addProperty("MID", mid);
                             envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
                             envelope.dotNet = true;
                             envelope.setOutputSoapObject(request);
                             androidHttpTransport = new HttpTransportSE(CommonString1.URL);
+
                             androidHttpTransport.call(CommonString1.SOAP_ACTION + CommonString1.METHOD_UPLOAD_XML, envelope);
                             result = (Object) envelope.getResponse();
+
                             if (!result.toString().equalsIgnoreCase(CommonString1.KEY_SUCCESS)) {
-                                return "WINDOW_DATA";
+                                continue;
+                               // return "GT_WINDOW_DATA_WITH_CHECKLIST_AND_STOCK";
                             }
                             data.value = 20;
-                            data.name = "WINDOW_DATA";
+                            data.name = "GT_WINDOW_DATA_WITH_CHECKLIST_AND_STOCK";
                             publishProgress(data);
                         }
 
-///////CheckList_DATA DATA
+
+                        // asset  data
+
                         final_xml = "";
                         onXML = "";
-                        check1 = database.getchecklist(coverageBeanlist.get(i).getStoreId());
+                        assetData = database.getassetdata(coverageBeanlist.get(i).getStoreId());
+                        if (assetData.size() > 0) {
 
-                        if (check1.size() > 0) {
-                            for (int j = 0; j < check1.size(); j++) {
-                                onXML = "[CHECK_LIST][MID]"
+                            for (int j = 0; j < assetData.size(); j++) {
+
+                                int key_id = assetData.get(j).getKey_id();
+                                assetStockData=   database.getAssetStockSavedDataByCommonid(key_id);
+                                String onXMLASSETSTOCK = "", assetfinal_xml = "";
+
+                                for (int j1 = 0; j1 < assetStockData.size(); j1++) {
+                                    onXMLASSETSTOCK = "[ASSET_STOCK][MID]"
+                                            + mid
+                                            + "[/MID]"
+                                            + "[CREATED_BY]"
+                                            + username
+                                            + "[/CREATED_BY]"
+                                            + "[SKU_CD]"
+                                            + assetStockData.get(j1).getSku_cd().get(0)
+                                            + "[/SKU_CD]"
+                                            + "[STOCK_QUANTITY]"
+                                            + assetStockData.get(j1).getSkuQuantity()
+                                            + "[/STOCK_QUANTITY]"
+                                            + "[BRAND_CD]"
+                                            + assetStockData.get(j1).getBrand_cd().get(0)
+                                            + "[/BRAND_CD]"
+                                            + "[COMMON_ID]"
+                                            + key_id
+                                            + "[/COMMON_ID]"
+                                            + "[/ASSET_STOCK]";
+
+                                    assetfinal_xml = assetfinal_xml + onXMLASSETSTOCK;
+                                }
+                                final String assetStock_xml = assetfinal_xml;
+
+
+                                onXML = "[ASSET_DATA][MID]"
                                         + mid
                                         + "[/MID]"
-
                                         + "[CREATED_BY]"
                                         + username
                                         + "[/CREATED_BY]"
-
-                                        + "[WINDOW_CD]"
-                                        + check1.get(j).getWINDOW_CD()
-                                        + "[/WINDOW_CD]"
-
-                                        + "[CHECKLIST_CD]"
-                                        + check1.get(j).getCHECKLIST_CD()
-                                        + "[/CHECKLIST_CD]"
-
-                                        + "[ANSWER_CD]"
-                                        + check1.get(j).getANSWER_CD()
-                                        + "[/ANSWER_CD]"
-
-                                        + "[/CHECK_LIST]";
+                                        + "[ASSET_IMG]"
+                                        + assetData.get(j).getAsset_image()
+                                        + "[/ASSET_IMG]"
+                                        + "[REMARK]"
+                                        + assetData.get(j).getRemark()
+                                        + "[/REMARK]"
+                                        + "[EXITORNOT]"
+                                        + assetData.get(j).getExitOrNot()
+                                        + "[/EXITORNOT]"
+                                        + "[ASSET_STOCK_DATA]"
+                                        + assetStock_xml
+                                        + "[/ASSET_STOCK_DATA]"
+                                        + "[/ASSET_DATA]";
 
                                 final_xml = final_xml + onXML;
+
                             }
                             final String sos_xml = "[DATA]" + final_xml + "[/DATA]";
                             request = new SoapObject(CommonString1.NAMESPACE, CommonString1.METHOD_UPLOAD_XML);
                             request.addProperty("XMLDATA", sos_xml);
-                            request.addProperty("KEYS", "GT_CHECK_LIST");
+                            request.addProperty("KEYS", "GT_ASSET_DATA_WITH_STOCK");
                             request.addProperty("USERNAME", username);
                             request.addProperty("MID", mid);
                             envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
                             envelope.dotNet = true;
                             envelope.setOutputSoapObject(request);
                             androidHttpTransport = new HttpTransportSE(CommonString1.URL);
-
                             androidHttpTransport.call(CommonString1.SOAP_ACTION + CommonString1.METHOD_UPLOAD_XML, envelope);
                             result = (Object) envelope.getResponse();
                             if (!result.toString().equalsIgnoreCase(CommonString1.KEY_SUCCESS)) {
-                                return "CHECK_LIST";
+                                continue;
+                                //return "GT_ASSET_DATA_WITH_STOCK";
                             }
-                            data.value = 30;
-                            data.name = "CHECK_LIST";
+                            data.value = 38;
+                            data.name = "GT_ASSET_DATA_WITH_STOCK";
                             publishProgress(data);
+
+                        }
+
+
+
+                        // Adddititional data
+
+                        final_xml = "";
+                        onXML = "";
+                        additional_visibility  = database.getAdditionalinsertedData(coverageBeanlist.get(i).getStoreId());
+                        if (additional_visibility.size() > 0) {
+
+                            for (int j = 0; j < additional_visibility.size(); j++) {
+                                onXML = "[ADDITIONAL_VISIBILITY][MID]"
+                                        + mid
+                                        + "[/MID]"
+                                        + "[CREATED_BY]"
+                                        + username
+                                        + "[/CREATED_BY]"
+                                        + "[CATEGORY_CD]"
+                                        + additional_visibility.get(j).getCategory_id().get(0)
+                                        + "[/CATEGORY_CD]"
+                                        + "[ADDITIONALV_IMG]"
+                                        + additional_visibility.get(j).getAdditional_image().get(0)
+                                        + "[/ADDITIONALV_IMG]"
+                                        + "[TOGGLE_VALUE]"
+                                        + additional_visibility.get(j).getToglvale().get(0)
+                                        + "[/TOGGLE_VALUE]"
+                                        + "[REMARK]"
+                                        + additional_visibility.get(j).getRemark()
+                                        + "[/REMARK]"
+                                        + "[/ADDITIONAL_VISIBILITY]";
+
+                                final_xml = final_xml + onXML;
+
+                            }
+                            final String sos_xml = "[DATA]" + final_xml + "[/DATA]";
+                            request = new SoapObject(CommonString1.NAMESPACE, CommonString1.METHOD_UPLOAD_XML);
+                            request.addProperty("XMLDATA", sos_xml);
+                            request.addProperty("KEYS", "GT_ADDITIONAL_VISIBILITY");
+                            request.addProperty("USERNAME", username);
+                            request.addProperty("MID", mid);
+                            envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
+                            envelope.dotNet = true;
+                            envelope.setOutputSoapObject(request);
+                            androidHttpTransport = new HttpTransportSE(CommonString1.URL);
+                            androidHttpTransport.call(CommonString1.SOAP_ACTION + CommonString1.METHOD_UPLOAD_XML, envelope);
+                            result = (Object) envelope.getResponse();
+                            if (!result.toString().equalsIgnoreCase(CommonString1.KEY_SUCCESS)) {
+                                continue;
+                              //  return "GT_ADDITIONAL_VISIBILITY";
+                            }
+                            data.value = 38;
+                            data.name = "GT_ADDITIONAL_VISIBILITY";
+                            publishProgress(data);
+
                         }
 
 
@@ -547,7 +706,8 @@ public class CheckoutNUpload extends Activity {
                             androidHttpTransport.call(CommonString1.SOAP_ACTION + CommonString1.METHOD_UPLOAD_XML, envelope);
                             result = (Object) envelope.getResponse();
                             if (!result.toString().equalsIgnoreCase(CommonString1.KEY_SUCCESS)) {
-                                return "STOCK_CATEGORY_DATA";
+                                continue;
+                                //return "STOCK_CATEGORY_DATA";
                             }
                             data.value = 38;
                             data.name = "STOCK_CATEGORY_DATA";
@@ -600,7 +760,8 @@ public class CheckoutNUpload extends Activity {
                             androidHttpTransport.call(CommonString1.SOAP_ACTION + CommonString1.METHOD_UPLOAD_XML, envelope);
                             result = (Object) envelope.getResponse();
                             if (!result.toString().equalsIgnoreCase(CommonString1.KEY_SUCCESS)) {
-                                return "STOCK_DATA";
+                                continue;
+                               // return "STOCK_DATA";
                             }
                             data.value = 45;
                             data.name = "STOCK_DATA";
@@ -608,57 +769,7 @@ public class CheckoutNUpload extends Activity {
 
                         }
 
-//							uploading SIGNAGE_DATA
 
-                        final_xml = "";
-                        onXML = "";
-                        SignAgeData = database.getSFTData(coverageBeanlist.get(i).getStoreId());
-
-                        if (SignAgeData.size() > 0) {
-
-                            for (int j = 0; j < SignAgeData.size(); j++) {
-
-                                onXML = "[SIGNAGE_DATA][MID]"
-                                        + mid
-                                        + "[/MID]"
-                                        + "[CREATED_BY]"
-                                        + username
-                                        + "[/CREATED_BY]"
-                                        + "[SIGN_EXIST]"
-                                        + SignAgeData.get(j).getExistSpinner_CD()
-                                        + "[/SIGN_EXIST]"
-                                        + "[WORKING]"
-                                        + SignAgeData.get(j).getWorkingsppiner_CD()
-                                        + "[/WORKING]"
-                                        + "[IMAGE_URL]"
-                                        + SignAgeData.get(j).getImage()
-                                        + "[/IMAGE_URL]"
-                                        + "[/SIGNAGE_DATA]";
-
-                                final_xml = final_xml + onXML;
-
-                            }
-                            final String sos_xml = "[DATA]" + final_xml + "[/DATA]";
-                            request = new SoapObject(CommonString1.NAMESPACE, CommonString1.METHOD_UPLOAD_XML);
-                            request.addProperty("XMLDATA", sos_xml);
-                            request.addProperty("KEYS", "GT_SIGNAGE_DATA");
-                            request.addProperty("USERNAME", username);
-                            request.addProperty("MID", mid);
-
-                            envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
-                            envelope.dotNet = true;
-                            envelope.setOutputSoapObject(request);
-                            androidHttpTransport = new HttpTransportSE(CommonString1.URL);
-                            androidHttpTransport.call(CommonString1.SOAP_ACTION + CommonString1.METHOD_UPLOAD_XML, envelope);
-                            result = (Object) envelope.getResponse();
-                            if (!result.toString().equalsIgnoreCase(CommonString1.KEY_SUCCESS)) {
-                                return "SIGNAGE_DATA";
-                            }
-                            data.value = 50;
-                            data.name = "SIGNAGE_DATA";
-                            publishProgress(data);
-
-                        }
 
 //							uploading POSM_DATA data
                         final_xml = "";
@@ -687,7 +798,9 @@ public class CheckoutNUpload extends Activity {
                                 final_xml = final_xml + onXML;
 
                             }
+
                             final String sos_xml = "[DATA]" + final_xml + "[/DATA]";
+
                             request = new SoapObject(CommonString1.NAMESPACE, CommonString1.METHOD_UPLOAD_XML);
                             request.addProperty("XMLDATA", sos_xml);
                             request.addProperty("KEYS", "GT_POSM_DATA");
@@ -702,7 +815,8 @@ public class CheckoutNUpload extends Activity {
                             result = (Object) envelope.getResponse();
 
                             if (!result.toString().equalsIgnoreCase(CommonString1.KEY_SUCCESS)) {
-                                return "POSM_DATA";
+                                continue;
+                                //return "POSM_DATA";
                             }
 
                             data.value = 60;
@@ -710,6 +824,7 @@ public class CheckoutNUpload extends Activity {
                             publishProgress(data);
 
                         }
+
 
 ///////FEEDBACK_DATA DATA
                         final_xml = "";
@@ -746,10 +861,12 @@ public class CheckoutNUpload extends Activity {
                                 envelope.dotNet = true;
                                 envelope.setOutputSoapObject(request);
                                 androidHttpTransport = new HttpTransportSE(CommonString1.URL);
+
                                 androidHttpTransport.call(CommonString1.SOAP_ACTION + CommonString1.METHOD_UPLOAD_XML, envelope);
                                 result = (Object) envelope.getResponse();
                                 if (!result.toString().equalsIgnoreCase(CommonString1.KEY_SUCCESS)) {
-                                    return "FEEDBACK_DATA";
+                                    continue;
+                                  //  return "FEEDBACK_DATA";
                                 }
 
                                 data.value = 70;
@@ -758,6 +875,7 @@ public class CheckoutNUpload extends Activity {
 
                             }
                         }
+
 
 //////////////////////////////////////
 
@@ -922,9 +1040,9 @@ public class CheckoutNUpload extends Activity {
                             database.updateStoreStatusOnLeave(coverageBeanlist.get(i).getStoreId(), coverageBeanlist.get(i).getVisitDate(), CommonString1.KEY_D);
                         }
                         if (!result1.toString().equalsIgnoreCase(CommonString1.KEY_SUCCESS)) {
-                            return "COVERAGE_STATUS";
+                            continue;
+                           // return "COVERAGE_STATUS";
                         }
-
                         data.value = 75;
                         data.name = "COVERAGE_STATUS";
                         publishProgress(data);
@@ -937,9 +1055,10 @@ public class CheckoutNUpload extends Activity {
                 list = getFileNames(dir.listFiles());
                 if (list.size() > 0) {
                     for (int i1 = 0; i1 < list.size(); i1++) {
-                        if (list.get(i1).contains("_STOREIMG_")||list.get(i1).contains("_NONWORKING_")) {
+                        if (list.get(i1).contains("_STOREIMG_")) {
                             File originalFile = new File(Path + list.get(i1));
-                            result = RetrofitClass.UploadImageByRetrofit(CheckoutNUpload.this, originalFile.getName(), "GTStoreImages");
+                            result = RetrofitClass.UploadImageByRetrofit(CheckoutNUpload.this,
+                                    originalFile.getName(), "GTStoreImages");
                             if (!result.toString().equalsIgnoreCase(CommonString1.KEY_SUCCESS)) {
                                 return result.toString();
                             }
@@ -947,7 +1066,7 @@ public class CheckoutNUpload extends Activity {
                             data.name = "StoreImages";
                             publishProgress(data);
                         }
-                       /* if (list.get(i1).contains("_NONWORKING_")) {
+                        if (list.get(i1).contains("_NONWORKING_")) {
                             File originalFile = new File(Path + list.get(i1));
                             //Retrofit
                             result = RetrofitClass.UploadImageByRetrofit(CheckoutNUpload.this, originalFile.getName(), "GTStoreImages");
@@ -957,7 +1076,7 @@ public class CheckoutNUpload extends Activity {
                             data.value = 85;
                             data.name = "GTStoreImages";
                             publishProgress(data);
-                        }*/
+                        }
 
                         if (list.get(i1).contains("_POASMIMG_")) {
                             File originalFile = new File(Path + list.get(i1));
@@ -1005,6 +1124,31 @@ public class CheckoutNUpload extends Activity {
                             data.name = "GTGeoTagImages";
                             publishProgress(data);
                         }
+
+                        if (list.get(i1).contains("_ADDITIONALIMG_")) {
+                            File originalFile = new File(Path + list.get(i1));
+                            result = RetrofitClass.UploadImageByRetrofit(CheckoutNUpload.this,
+                                    originalFile.getName(), "GTAdditionalVisibilityImages");
+                            if (!result.toString().equalsIgnoreCase(CommonString1.KEY_SUCCESS)) {
+                                return result.toString();
+                            }
+                            data.value = 80;
+                            data.name = "_ADDITIONALIMG_";
+                            publishProgress(data);
+                        }
+
+                        if (list.get(i1).contains("_ASSETIMG_")) {
+                            File originalFile = new File(Path + list.get(i1));
+                            result = RetrofitClass.UploadImageByRetrofit(CheckoutNUpload.this,
+                                    originalFile.getName(), "GTAssetImages");
+                            if (!result.toString().equalsIgnoreCase(CommonString1.KEY_SUCCESS)) {
+                                return result.toString();
+                            }
+                            data.value = 80;
+                            data.name = "_ASSETIMG_";
+                            publishProgress(data);
+                        }
+
                     }
                     String response = updateStatus();
                     if (!response.equalsIgnoreCase(CommonString1.KEY_SUCCESS)) {
@@ -1068,7 +1212,7 @@ public class CheckoutNUpload extends Activity {
             if (result.contains(CommonString1.KEY_SUCCESS)) {
                 AlertMessage message = new AlertMessage(CheckoutNUpload.this, AlertMessage.MESSAGE_UPLOAD_DATA, "success", null);
                 message.showMessage();
-                database.deleteAllTables();
+               // database.deleteAllTables();
             } else if (!result.equals("")) {
                 AlertMessage message = new AlertMessage(CheckoutNUpload.this, "Error in uploading :" + result, "success", null);
                 message.showMessage();
@@ -1083,7 +1227,8 @@ public class CheckoutNUpload extends Activity {
         try {
             coverageBeanlist = database.getCoverageData(prev_date);
             for (int i = 0; i < coverageBeanlist.size(); i++) {
-                if (!coverageBeanlist.get(i).getStatus().equalsIgnoreCase(CommonString1.KEY_U)) {
+                journeyPlanGetterSetter = database.getStoreStatus(coverageBeanlist.get(i).getStoreId());
+                if (journeyPlanGetterSetter.getUploadStatus().get(0).equalsIgnoreCase(CommonString1.KEY_D)) {
                     onXML = "[COVERAGE_STATUS][STORE_ID]"
                             + coverageBeanlist.get(i).getStoreId()
                             + "[/STORE_ID]"

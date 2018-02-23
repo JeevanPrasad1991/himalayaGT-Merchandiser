@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:2:1-321:12
+ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:2:1-331:12
 	package
 		ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:3:5-35
 		INJECTED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml
@@ -89,7 +89,7 @@ ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\Himala
 	android:name
 		ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:24:22-75
 application
-ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:26:5-319:19
+ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:26:5-329:19
 MERGED from [com.android.support:design:23.1.1] F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\exploded-aar\com.android.support\design\23.1.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:appcompat-v7:23.1.1] F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:cardview-v7:23.1.1] F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.1.1\AndroidManifest.xml:22:5-20
@@ -480,7 +480,7 @@ ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\Himala
 	android:screenOrientation
 		ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:220:13-49
 	android:label
-		ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:219:13-33
+		ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:219:13-49
 	android:windowSoftInputMode
 		ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:222:13-52
 	android:configChanges
@@ -638,36 +638,58 @@ ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\Himala
 	android:name
 		ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:296:13-62
 meta-data#com.google.android.gms.version
-ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:306:9-308:69
+ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:304:9-306:69
 MERGED from [com.google.android.gms:play-services-basement:8.4.0] F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
 	android:value
-		ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:308:13-66
+		ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:306:13-66
 	android:name
-		ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:307:13-58
+		ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:305:13-58
 activity#com.cpm.dailyentry.AdditionalVisibilityActivity
-ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:310:9-315:55
+ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:308:9-313:55
 	android:label
-		ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:313:13-52
+		ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:311:13-52
 	android:windowSoftInputMode
-		ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:315:13-52
+		ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:313:13-52
 	android:configChanges
-		ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:312:13-74
+		ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:310:13-74
 	android:theme
-		ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:314:13-56
+		ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:312:13-56
 	android:name
-		ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:311:13-75
+		ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:309:13-75
 activity#com.cpm.dailyentry.AssetNewActivity
-ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:316:9-72
+ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:314:9-318:56
+	android:label
+		ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:315:13-43
+	android:windowSoftInputMode
+		ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:318:13-52
+	android:configChanges
+		ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:316:13-74
+	android:theme
+		ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:317:13-56
 	android:name
-		ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:316:19-69
+		ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:314:19-69
 activity#com.cpm.dailyentry.AssetReferenceActivity
-ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:317:9-78
+ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:319:9-324:15
+	android:label
+		ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:320:13-44
+	android:windowSoftInputMode
+		ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:323:13-52
+	android:configChanges
+		ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:321:13-74
+	android:theme
+		ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:322:13-56
 	android:name
-		ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:317:19-75
+		ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:319:19-75
 activity#com.cpm.dailyentry.SubAssetCategoryActivity
-ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:318:9-89
+ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:325:9-328:64
+	android:windowSoftInputMode
+		ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:328:13-52
+	android:configChanges
+		ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:327:13-74
+	android:theme
+		ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:326:13-56
 	android:name
-		ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:318:19-77
+		ADDED from F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\src\main\AndroidManifest.xml:325:19-77
 uses-feature#0x00020000
 ADDED from [com.google.android.gms:play-services-maps:8.4.0] F:\jeevanAndroidProject\androidProject\himalayaGT-Merchandiser\HimalayaGt\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:22:5-24:33
 	android:glEsVersion

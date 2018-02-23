@@ -28,6 +28,7 @@
             android:id="@+id/qwantity_edt"
             android:layout_weight="30"
             android:inputType="number"
+            android:maxLength="5"
             android:layout_width="0dp"
             android:layout_marginLeft="2dp"
             android:layout_height="match_parent"

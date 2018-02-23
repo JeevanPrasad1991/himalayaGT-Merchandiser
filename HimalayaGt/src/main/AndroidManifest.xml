@@ -216,7 +216,7 @@
         <activity
             android:name="com.cpm.dailyentry.POSMActivity"
             android:configChanges="screenSize|orientation|keyboardHidden"
-            android:label=" POB"
+            android:label=" Visibility Elements"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustPan" />
@@ -296,12 +296,10 @@
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyBQ1d9O0sw2GyIsPCElxgg-1LU2YQa3_Lg" />
 
-        <!--
-       //release map key
+    <!--   //release map key
    <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyDgPfQ1ZhSbA6GZRo9evfKYOs5f0VKLRmo"/>
-        -->
+            android:value="AIzaSyDgPfQ1ZhSbA6GZRo9evfKYOs5f0VKLRmo"/>-->
 
         <meta-data
             android:name="com.google.android.gms.version"
@@ -313,9 +311,21 @@
             android:label="Visibility Primary(POG)"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name="com.cpm.dailyentry.AssetNewActivity" />
-        <activity android:name="com.cpm.dailyentry.AssetReferenceActivity" />
-        <activity android:name="com.cpm.dailyentry.SubAssetCategoryActivity"></activity>
+        <activity android:name="com.cpm.dailyentry.AssetNewActivity"
+            android:label="Asset Category"
+            android:configChanges="screenSize|orientation|keyboardHidden"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan"  />
+        <activity android:name="com.cpm.dailyentry.AssetReferenceActivity"
+            android:label="Asset Reference"
+            android:configChanges="screenSize|orientation|keyboardHidden"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity android:name="com.cpm.dailyentry.SubAssetCategoryActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="screenSize|orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustPan"></activity>
     </application>
 
 </manifest>

@@ -73,42 +73,12 @@ public class PlanogramActivity extends AppCompatActivity {
 
         @Override
         public void onPageStarted(WebView view, String url, Bitmap favicon) {
-            pd.show();
+           // pd.show();
             super.onPageStarted(view, url, favicon);
         }
 
 
     }
 
-   /* public class information extends AsyncTask<String, String, String> {
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-            dialog = new ProgressDialog(PlanogramActivity.this);
-            dialog.setMessage("Please wait....");
-            dialog.show();
-            dialog.setCancelable(true);
-        }
-
-        @Override
-        protected String doInBackground(String... arg0) {
-            dialog.dismiss();
-            try {
-                URL url = new URL(str);
-                InputStream is = new BufferedInputStream(url.openStream());
-                b = BitmapFactory.decodeStream(is);
-
-            } catch (Exception e) {
-            }
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(String result) {
-            dialog.dismiss();
-           // imageview.setImageBitmap(b);
-        }
-    }
-*/
 
 }

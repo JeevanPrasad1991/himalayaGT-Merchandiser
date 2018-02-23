@@ -63,7 +63,9 @@ public class AssetNewActivity extends AppCompatActivity {
     Button btnSave;
     ImageView img;
     ArrayList<AssetMappingGetterSetter> listDataHeader = new ArrayList<>();
+    AssetMappingGetterSetter category_list;
     ValueAdapter adapter;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.asset_layout);
@@ -80,16 +82,12 @@ public class AssetNewActivity extends AppCompatActivity {
         store_cd = preferences.getString(CommonString1.KEY_STORE_CD, null);
         visit_date = preferences.getString(CommonString1.KEY_DATE, null);
         username = preferences.getString(CommonString1.KEY_USERNAME, null);
-        // preparing list data
-        // prepareListData();
         listDataHeader = db.getassetCategoryData(store_cd);
         if (listDataHeader.size() > 0) {
             adapter = new ValueAdapter(getApplicationContext(), listDataHeader);
             rec_recyclerV.setAdapter(adapter);
             rec_recyclerV.setLayoutManager(new LinearLayoutManager(this));
-           // rec_recyclerV.setAdapter(new MyAdapterAsset());
         }
-
     }
 
     @Override
@@ -104,7 +102,6 @@ public class AssetNewActivity extends AppCompatActivity {
             overridePendingTransition(R.anim.activity_back_in, R.anim.activity_back_out);
             finish();
         }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -140,24 +137,18 @@ public class AssetNewActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     Intent in = new Intent(getApplicationContext(), SubAssetCategoryActivity.class);
-                    in.putExtra("OBJECT",  current);
+                    in.putExtra("OBJECT", current);
                     startActivity(in);
                     overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
                     finish();
                 }
             });
 
-            if (!img1.equalsIgnoreCase("")) {
-               /* if (position == child_position) {
-                    //childText.get(childPosition).setCamera("YES");
-                    current.setWindow_image(img1);
-                    //childText.setImg(img1);
-                    img1 = "";
-
-                }*/
+            if (db.getAssetForCheckFillPerticulerListData(store_cd, current.getAsset_cd().get(0),current.getCategory_id().get(0))) {
+                viewHolder.closebtn.setVisibility(View.VISIBLE);
+            } else {
+                viewHolder.closebtn.setVisibility(View.GONE);
             }
-
-
         }
 
         @Override
@@ -170,10 +161,13 @@ public class AssetNewActivity extends AppCompatActivity {
     class MyViewHolder extends RecyclerView.ViewHolder {
         TextView asset_name;
         CardView crd_v;
+        ImageView closebtn;
+
         public MyViewHolder(View itemView) {
             super(itemView);
             asset_name = (TextView) itemView.findViewById(R.id.asset_name);
             crd_v = (CardView) itemView.findViewById(R.id.crd_v);
+            closebtn = (ImageView) itemView.findViewById(R.id.closechkin1);
         }
     }
 

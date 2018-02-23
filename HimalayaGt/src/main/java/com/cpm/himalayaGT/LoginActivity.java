@@ -88,7 +88,6 @@ public class LoginActivity extends Activity implements OnClickListener,
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         ContentResolver.setMasterSyncAutomatically(false);
-        // login_version = (TextView) findViewById(R.id.login_versiontext);
         mUsername = (EditText) findViewById(R.id.login_usertextbox);
         mPassword = (EditText) findViewById(R.id.login_locktextbox);
         versioname = (TextView) findViewById(R.id.version);
@@ -112,40 +111,30 @@ public class LoginActivity extends Activity implements OnClickListener,
         database = new GSKDatabase(this);
 //		database.open();
         if (!isChecked) {
-            // login_remembericon.setImageResource(R.drawable.deactive_radio_box);
+
         } else {
             mUsername.setText(p_username);
             mPassword.setText(p_password);
         }
-
         mLogin.setOnClickListener(this);
-        // login_remember.setOnClickListener(this);
-
         locmanager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         enabled = locmanager.isProviderEnabled(LocationManager.GPS_PROVIDER);
-
         // Check if enabled and if not send user to the GSP settings
         // Better solution would be to display a dialog and suggesting to
         // go to the settings
         if (!enabled) {
-
-            AlertDialog.Builder alertDialog = new AlertDialog.Builder(
-                    LoginActivity.this);
-
+            AlertDialog.Builder alertDialog = new AlertDialog.Builder(LoginActivity.this);
             // Setting Dialog Title
             alertDialog.setTitle("GPS IS DISABLED...");
-
             // Setting Dialog Message
             alertDialog.setMessage("Click ok to enable GPS.");
-
             // Setting Positive "Yes" Button
             alertDialog.setPositiveButton("YES",
                     new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-
-                            intent = new Intent(
-                                    Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+                            intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
                             startActivity(intent);
+                            dialog.dismiss();
                         }
                     });
 

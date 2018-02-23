@@ -12,9 +12,9 @@
                     android:gravity="center"
                     android:layout_width="match_parent"
                     android:background="@color/primarycolor"
-                    android:textSize="18dp"
+                    android:textSize="20dp"
                     android:textColor="@color/white"
-                    android:text="Stock List"
+                    android:text="Stock Entry"
                     android:layout_height="wrap_content" />
         </LinearLayout>
 
@@ -49,7 +49,7 @@
                     android:gravity="center"
                     android:layout_marginLeft="2dp"
                     android:background="@color/primarycolor"
-                    android:text="Save"
+                    android:text="OK"
                     android:textColor="@color/white"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
@@ -68,16 +68,7 @@
 
         </RelativeLayout>
 
-       <!-- <Button
-           android:id="@+id/save_sku"
-            android:gravity="center"
-            android:background="@color/primarycolor"
-            android:layout_marginLeft="110dp"
-            android:text="Save"
-            android:textColor="@color/white"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"/>-->
+
 
 
 </RelativeLayout>
